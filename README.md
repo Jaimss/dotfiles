@@ -1,2 +1,2 @@
 # vimrc
-My vim configs.
+My Personal vim configs. Feel free to use them if you want.
