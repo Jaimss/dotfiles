@@ -2,7 +2,7 @@ syntax on
 
 " color scheme
 colorscheme onedark
-let g:airline_theme='onedark'
+let g:airline_theme='one'
 
 set tabstop=4 softtabstop=4 
 set shiftwidth=4
