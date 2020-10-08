@@ -1,20 +1,30 @@
 syntax on
+
+" color scheme
+colorscheme onedark
+let g:airline_theme='onedark'
+
 set tabstop=4 softtabstop=4 
 set shiftwidth=4
 set expandtab
 set smartindent
 set nowrap
+set number
+set relativenumber
+set splitright
+
+" disable arrows
+for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+  exec 'noremap' key '<Nop>'
+  exec 'inoremap' key '<Nop>'
+  exec 'cnoremap' key '<Nop>'
+endfor
 
 " swap / undo
 set noswapfile
 set nobackup
 set undodir=D:\Installs\Vim\undodir
 set undofile
-
-" Nice settings to have
-set number
-set relativenumber
-set splitright
 
 " no annoying error bells
 set noerrorbells
@@ -27,6 +37,7 @@ let mapleader = " "
 
 " Mapping
 nmap <leader>w :w!<cr>
+nmap <leader>q :q<cr>
 map <C-space> ?
 map <silent> <leader><cr> :noh<cr>
 
@@ -54,10 +65,10 @@ vnoremap <leader> s "*
 map <leader>pv :wincmd v<bar> :Ex<bar> :vertical resize 30<cr>
 
 " The shell for commands
-set shell=powershell
-set shellcmdflag=-command
-set shellquote=\"
-set shellxquote=
+" set shell=powershell
+" set shellcmdflag=-command
+" set shellquote=\"
+" set shellxquote=
 
 " avoid random characters (for windows)
 let $LANG='en'
@@ -77,3 +88,17 @@ set hlsearch
 set incsearch
 set lazyredraw
 set magic
+
+" nerd tree 
+autocmd vimenter * NERDTree
+map <leader>n :NERDTreeToggle<Cr>
+
+" plugins
+call plug#begin()
+
+Plug 'terryma/vim-multiple-cursors'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
