@@ -1,6 +1,6 @@
 syntax on
 
-" color scheme
+" color scheme 
 colorscheme onedark
 let g:airline_theme='one'
 
