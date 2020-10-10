@@ -62,8 +62,6 @@ vnoremap K :m '<-2<cr>gv=gv
 map <leader>s "*
 vnoremap <leader> s "*
 
-map <leader>pv :wincmd v<bar> :Ex<bar> :vertical resize 30<cr>
-
 " The shell for commands
 " set shell=powershell
 " set shellcmdflag=-command
@@ -93,6 +91,9 @@ set magic
 autocmd vimenter * NERDTree
 map <leader>n :NERDTreeToggle<Cr>
 
+" ctrl p
+map <leader>p :CtrlP<cr>
+
 " plugins
 call plug#begin()
 
@@ -100,5 +101,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
