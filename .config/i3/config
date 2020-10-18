@@ -141,10 +141,10 @@ assign [class=$steamClass] $ws8
 assign [class=$discordClass] $ws9
 for_window [class=$spotifyClass] move window to workspace $ws10
 
-exec spotify
-exec google-chrome
 exec gnome-terminal
+exec google-chrome
 exec discord
+exec spotify
 
 exec_always i3-msg '[workspace=$ws9]' move workspace to output DP-4
 exec_always i3-msg '[workspace=$ws10]' move workspace to output DP-4

@@ -82,7 +82,7 @@ vnoremap <leader> s "*
 " avoid random characters (for windows)
 let $LANG='en'
 set langmenu='en'
-set encoding=utf8
+set encoding=utf-8
 
 " wild menu
 set wildmenu
@@ -98,6 +98,10 @@ set incsearch
 set lazyredraw
 set magic
 
+" python related stuff
+let NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
+let python_highlight_all=1
+
 " nerd tree 
 autocmd vimenter * NERDTree
 map <leader>n :NERDTreeToggle<Cr>
@@ -108,11 +112,21 @@ map <leader>p :CtrlP<cr>
 " plugins
 call plug#begin()
 
+" folding
+set foldlevel=99
+
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
+" git
 Plug 'tpope/vim-fugitive'
+" fold with za
+Plug 'https://github.com/tmhedberg/SimpylFold.git'
+" python plugins
+Plug 'vim-scripts/indentpython.vim'
+Plug 'nvie/vim-flake8'
 
 call plug#end()
