@@ -128,5 +128,7 @@ Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
 Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
+" kotlin plugins
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
