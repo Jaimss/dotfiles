@@ -12,7 +12,7 @@
 set $mod Mod4
 
 # Display
-exec_always xrandr --output DP-4 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-1 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-1 --right-of DP-4
+exec_always xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
 exec_always feh --bg-scale ~/Documents/i3themes/i3wm-themes/Space/Space.png
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -137,6 +137,9 @@ set $discordClass "discord"
 set $steamClass "Steam"
 assign [class=$terminalClass] $ws1
 assign [class=$chromeClass] $ws2
+assign [class="jetbrains-webstorm"] $ws3
+assign [class="jetbrains-intellij"] $ws3
+assign [class="jetbrains-pycharm"] $ws3
 assign [class=$steamClass] $ws8
 assign [class=$discordClass] $ws9
 for_window [class=$spotifyClass] move window to workspace $ws10
@@ -146,8 +149,9 @@ exec google-chrome
 exec discord
 exec spotify
 
-exec_always i3-msg '[workspace=$ws9]' move workspace to output DP-4
-exec_always i3-msg '[workspace=$ws10]' move workspace to output DP-4
+exec_always i3-msg '[workspace=$ws2]' move workspace to output HDMI-0 
+exec_always i3-msg '[workspace=$ws9]' move workspace to output DP-1
+exec_always i3-msg '[workspace=$ws10]' move workspace to output DP-1
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
