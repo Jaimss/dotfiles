@@ -12,17 +12,18 @@
 set $mod Mod4
 
 # gaps
-gaps outer 10
+gaps outer 2
 gaps inner 10
+new_window pixel 0
 
-# keybinds to open applications
-bindsym $mod+F2 exec google-chrome
-
-# Display
 # startup and postiion screens
-exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-0 --primary --mode 1920x1080 --pos 1080x420 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output USB-C-0 --off
+exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --rate 144.00 --output HDMI-0 --primary --mode 1920x1080 --pos 1080x420 --rotate normal --rate 144.00 --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output USB-C-0 --off
 # exec_always --no-startup-id xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
-exec_always --no-startup-id feh --bg-scale ~/Documents/i3themes/i3wm-themes/Space/Space.png
+exec_always --no-startup-id feh --bg-scale /home/james/.config/i3/background.png
+
+# dont sleep
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
 
 #polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -56,9 +57,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# start a terminal i3-sensible-terminal ??
+bindsym $mod+Return exec gnome-terminal
 
+# keybinds to open applications
+bindsym $mod+F2 exec google-chrome
+
+# Display
 # kill focused window
 bindsym $mod+q kill
 
@@ -148,6 +153,7 @@ set $terminalClass "Gnome-terminal"
 set $discordClass "discord"
 set $steamClass "Steam"
 assign [class=$terminalClass] $ws1
+assign [class="Terminator"] $ws1
 assign [class=$chromeClass] $ws2
 assign [class="jetbrains-webstorm"] $ws3
 assign [class="jetbrains-intellij"] $ws3
@@ -156,10 +162,10 @@ assign [class=$steamClass] $ws8
 assign [class=$discordClass] $ws9
 for_window [class=$spotifyClass] move window to workspace $ws10
 
-exec gnome-terminal
-exec google-chrome
-exec discord
-exec spotify
+exec --no-startup-id gnome-terminal
+exec --no-startup-id google-chrome
+exec --no-startup-id discord
+exec --no-startup-id spotify
 
 exec_always i3-msg '[workspace=$ws2]' move workspace to output HDMI-0 
 exec_always i3-msg '[workspace=$ws9]' move workspace to output DP-1
@@ -239,4 +245,4 @@ client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #000D28
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #000D28
 
-exec_always compton --config /home/james/.config/compton.conf
+exec_always --no-startup-id compton --config /home/james/.config/compton.conf
