@@ -15,9 +15,13 @@ set $mod Mod4
 gaps outer 10
 gaps inner 10
 
+# keybinds to open applications
+bindsym $mod+F2 exec google-chrome
 
 # Display
-exec_always --no-startup-id xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
+# startup and postiion screens
+exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --output HDMI-0 --primary --mode 1920x1080 --pos 1080x420 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output USB-C-0 --off
+# exec_always --no-startup-id xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
 exec_always --no-startup-id feh --bg-scale ~/Documents/i3themes/i3wm-themes/Space/Space.png
 
 #polybar
@@ -230,11 +234,9 @@ set $urgent-bg-color     #bd2c40
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $bg-color           $bg-color          $text-color          #000D28
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #000D28
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #000D28
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #000D28
 
-hide_edge_borders both
-
-exec_always compton
+exec_always compton --config /home/james/.config/compton.conf
