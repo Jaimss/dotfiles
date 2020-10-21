@@ -11,9 +11,17 @@
 
 set $mod Mod4
 
+# gaps
+gaps outer 10
+gaps inner 10
+
+
 # Display
-exec_always xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
-exec_always feh --bg-scale ~/Documents/i3themes/i3wm-themes/Space/Space.png
+exec_always --no-startup-id xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
+exec_always --no-startup-id feh --bg-scale ~/Documents/i3themes/i3wm-themes/Space/Space.png
+
+#polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -218,7 +226,7 @@ set $bg-color 	         #2f343f
 set $inactive-bg-color   #22262e
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $urgent-bg-color     #bd2c40
 
 # window colors
 #                       border              background         text                 indicator
@@ -228,22 +236,5 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 hide_edge_borders both
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3blocks -c /home/james/.config/i3/i3blocks.conf
-        
-        # 
-
-        colors {
-                background $bg-color
-                separator #757575
-#                                  border             background         text
-                focused_workspace  $bg-color          $bg-color          $text-color
-                inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-                urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        }
-}
 
 exec_always compton
