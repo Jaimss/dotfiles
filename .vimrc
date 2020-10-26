@@ -65,10 +65,6 @@ map <leader>tm :tabmove<cr>
 map <leader>i I
 map <leader>a A
 
-" move a selected code block up or down
-vnoremap J :m '>+1<cr>gv=gv
-vnoremap K :m '<-2<cr>gv=gv
-
 " system commands
 map <leader>s "*
 vnoremap <leader> s "*
