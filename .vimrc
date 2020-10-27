@@ -126,5 +126,7 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'nvie/vim-flake8'
 " kotlin plugins
 Plug 'udalov/kotlin-vim'
+" Docker
+Plug 'ekalinin/Dockerfile.vim'
 
 call plug#end()
