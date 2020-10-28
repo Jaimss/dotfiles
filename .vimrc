@@ -62,9 +62,6 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove<cr>
 
-map <leader>i I
-map <leader>a A
-
 " system commands
 map <leader>s "*
 vnoremap <leader> s "*
@@ -99,7 +96,7 @@ let NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
 let python_highlight_all=1
 
 " nerd tree 
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 map <leader>n :NERDTreeToggle<Cr>
 
 " ctrl p
