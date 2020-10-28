@@ -47,6 +47,8 @@ set visualbell
 let mapleader = " "
 
 " Mapping
+imap jk <Esc>
+
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
 map <C-space> ?
