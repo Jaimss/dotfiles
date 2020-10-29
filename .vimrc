@@ -4,14 +4,30 @@ syntax on
 colorscheme onedark
 let g:airline_theme='one'
 
+" search / case
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+set lazyredraw
+set magic
+
+" tabs / indentation
 set tabstop=4 softtabstop=4 
 set shiftwidth=4
 set expandtab
 set autoindent
 set nowrap
+
+" line numbers
 set number
 set relativenumber
+
+" split things to the right not the left
 set splitright
+
+" show matching brace/bracket
+set showmatch
 
 " disable arrows
 for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -46,19 +62,24 @@ set visualbell
 " leader key
 let mapleader = " "
 
-" Mapping
+" Mapping, esc with jk
 imap jk <Esc>
 
+" write and quit with leader keys 
 nmap <leader>w :w!<cr>
 nmap <leader>q :q<cr>
 map <C-space> ?
+
+" remove highlighting from searches and whatnot 
 map <silent> <leader><cr> :noh<cr>
 
+" move to different windows with leader keys
 map <leader>h :wincmd h<cr>
 map <leader>j :wincmd j<cr>
 map <leader>k :wincmd k<cr>
 map <leader>l :wincmd l<cr>
 
+" manage tabs with leader+t etc 
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
@@ -68,13 +89,7 @@ map <leader>tm :tabmove<cr>
 map <leader>s "*
 vnoremap <leader> s "*
 
-" The shell for commands
-" set shell=powershell
-" set shellcmdflag=-command
-" set shellquote=\"
-" set shellxquote=
-
-" avoid random characters (for windows)
+" language related
 let $LANG='en'
 set langmenu='en'
 set encoding=utf-8
@@ -84,14 +99,6 @@ set wildmenu
 
 " show location
 set ruler
-
-" search / case
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set lazyredraw
-set magic
 
 " python related stuff
 let NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
@@ -104,11 +111,11 @@ map <leader>n :NERDTreeToggle<Cr>
 " ctrl p
 map <leader>p :CtrlP<cr>
 
-" plugins
-call plug#begin()
-
 " folding
 set foldlevel=99
+
+" plugins
+call plug#begin()
 
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdtree'
@@ -122,8 +129,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
 Plug 'vim-python/python-syntax'
-" kotlin plugins
-Plug 'udalov/kotlin-vim'
 " Docker
 Plug 'ekalinin/Dockerfile.vim'
 
