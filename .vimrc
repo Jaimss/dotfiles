@@ -99,6 +99,8 @@ set ruler
 " python related stuff
 let NERDTreeIgnore=['\.pyc$', '\~$', '__pycache__']
 let python_highlight_all=1
+let g:validator_python_checkers = ['flake8']
+let g:validator_permament_sign = 1
 
 " nerd tree 
 " autocmd vimenter * NERDTree
@@ -125,11 +127,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
 Plug 'vim-python/python-syntax'
+Plug 'nvie/vim-flake8'
 " Docker
 Plug 'ekalinin/Dockerfile.vim'
 " theme
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'morhetz/gruvbox'
+" linting
+Plug 'maralla/validator.vim'
 
 call plug#end()
 
