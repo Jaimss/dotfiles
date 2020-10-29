@@ -1,9 +1,5 @@
 syntax on
 
-" color scheme
-colorscheme onedark
-let g:airline_theme='one'
-
 " search / case
 set ignorecase
 set smartcase
@@ -131,5 +127,21 @@ Plug 'https://github.com/tmhedberg/SimpylFold.git'
 Plug 'vim-python/python-syntax'
 " Docker
 Plug 'ekalinin/Dockerfile.vim'
+" theme
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+" color scheme
+set termguicolors
+set bg=dark
+
+" for gruvbox
+" colorscheme gruvbox
+" let g:airline_theme='gruvbox'
+
+" for onehalf
+colorscheme onehalfdark
+let g:airline_theme='onehalfdark'
+
