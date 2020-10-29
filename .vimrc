@@ -7,7 +7,7 @@ let g:airline_theme='one'
 set tabstop=4 softtabstop=4 
 set shiftwidth=4
 set expandtab
-set smartindent
+set autoindent
 set nowrap
 set number
 set relativenumber
@@ -121,8 +121,7 @@ Plug 'tpope/vim-fugitive'
 " fold with za
 Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
-Plug 'vim-scripts/indentpython.vim'
-Plug 'nvie/vim-flake8'
+Plug 'vim-python/python-syntax'
 " kotlin plugins
 Plug 'udalov/kotlin-vim'
 " Docker
