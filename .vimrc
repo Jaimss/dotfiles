@@ -108,6 +108,8 @@ map <leader>n :NERDTreeToggle<Cr>
 
 " ctrl p
 map <leader>p :CtrlP<cr>
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
 
 " folding
 set foldlevel=99
