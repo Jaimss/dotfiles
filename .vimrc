@@ -25,12 +25,11 @@ set splitright
 " show matching brace/bracket
 set showmatch
 
-" disable arrows (i used this when i was new to get out of the arrow key habit
-" for key in ['<Up>', '<Down>', '<Left>', '<Right>']
-"   exec 'noremap' key '<Nop>'
-"  exec 'inoremap' key '<Nop>'
-" exec 'cnoremap' key '<Nop>'
-" endfor
+" disable arrows 
+for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+   exec 'noremap' key '<Nop>'
+   exec 'inoremap' key '<Nop>'
+endfor
 
 " swap / undo
 set noswapfile
