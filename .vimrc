@@ -138,6 +138,9 @@ Plug 'morhetz/gruvbox'
 " linting
 Plug 'maralla/validator.vim'
 
+" dev elara plugin
+Plug '/home/james/Documents/GithubStuff/Jaims/elara-vimsyntax'
+
 call plug#end()
 
 " color scheme

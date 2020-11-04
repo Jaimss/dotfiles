@@ -49,6 +49,11 @@ fixed-center = true
 background = ${colors.bg}
 foreground = ${colors.white}
 
+; system tray
+tray-position = right
+tray-padding = 3
+tray-background = ${colors.bg-darker}
+
 line-size = 3
 line-color = #f00
 
@@ -110,14 +115,14 @@ type = internal/cpu
 interval = 2
 format-foreground = ${colors.blue}
 format-background = ${colors.bg-darker}
-label = " CPU: %percentage:2%% "
+label = "%percentage:2%% "
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-foreground = ${colors.blue}
 format-background = ${colors.bg-darker}
-label = " RAM: %percentage_used%% "
+label = "  %percentage_used%% "
 
 [module/date]
 type = internal/date

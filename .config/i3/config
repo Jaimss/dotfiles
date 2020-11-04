@@ -16,6 +16,11 @@ gaps outer 2
 gaps inner 10
 new_window pixel 0
 
+# enable media controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 # startup and postiion screens
 exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --rate 144.00 --output HDMI-0 --primary --mode 1920x1080 --pos 1080x420 --rotate normal --rate 144.00 --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output USB-C-0 --off
 # exec_always --no-startup-id xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
@@ -147,20 +152,19 @@ set $ws8 "8: "
 set $ws9 "9: "
 set $ws10 "10: "
 
-set $spotifyClass "Spotify"
-set $chromeClass "Google-chrome"
-set $terminalClass "Gnome-terminal"
-set $discordClass "discord"
-set $steamClass "Steam"
-assign [class=$terminalClass] $ws1
+assign [class="Gnome-terminal"] $ws1
 assign [class="Terminator"] $ws1
-assign [class=$chromeClass] $ws2
-assign [class="jetbrains-webstorm"] $ws3
-assign [class="jetbrains-intellij"] $ws3
-assign [class="jetbrains-pycharm"] $ws3
-assign [class=$steamClass] $ws8
-assign [class=$discordClass] $ws9
-for_window [class=$spotifyClass] move window to workspace $ws10
+assign [class="Google-chrome"] $ws2
+assign [class="jetbrains-*"] $ws3
+assign [class="Code"] $ws3
+assign [class="zoom"] $ws7
+assign [class="steam_app_*"] $ws8
+assign [class="Steam"] $ws8
+assign [class="minecraft-launcher"] $ws8
+assign [class="Minecraft *"] $ws8
+assign [class="discord"] $ws9
+for_window [class="Spotify"] move window to workspace $ws10
+for_window [class="steam_app_*"] floating enable
 
 exec --no-startup-id gnome-terminal
 exec --no-startup-id google-chrome
