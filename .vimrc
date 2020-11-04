@@ -139,7 +139,7 @@ Plug 'morhetz/gruvbox'
 Plug 'maralla/validator.vim'
 
 " dev elara plugin
-Plug '/home/james/Documents/GithubStuff/Jaims/elara-vimsyntax'
+" Plug '/home/james/Documents/GithubStuff/Jaims/elara-vimsyntax'
 
 call plug#end()
 
