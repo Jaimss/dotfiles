@@ -15,6 +15,8 @@ set expandtab
 set autoindent
 set nowrap
 
+filetype plugin indent on
+
 " line numbers
 set number
 set relativenumber
