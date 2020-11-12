@@ -128,7 +128,7 @@ label = "  %percentage_used%% "
 type = internal/date
 interval = 1
 
-date =
+date = " %m/%d/%y"
 date-alt = " %m/%d/%y"
 
 time = %r
