@@ -15,6 +15,7 @@ set $mod Mod4
 gaps outer 2
 gaps inner 10
 new_window pixel 0
+border_radius 3
 
 # enable media controls
 bindsym XF86AudioPlay exec playerctl play-pause
