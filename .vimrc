@@ -138,6 +138,7 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'morhetz/gruvbox'
 " linting
 Plug 'maralla/validator.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " dev elara plugin
 " Plug '/home/james/Documents/GithubStuff/Jaims/elara-vimsyntax'
