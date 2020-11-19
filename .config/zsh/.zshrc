@@ -1,6 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/james/.config/zsh/.oh-my-zsh"
-export ZSH_CACHE_DIR="/home/james/.config/zsh/.oh-my-zsh/cache"
+export ZSH="$XDG_CONFIG_HOME/zsh/.oh-my-zsh"
+export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
 
 ZSH_THEME="robbyrussell"
 

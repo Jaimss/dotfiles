@@ -25,7 +25,7 @@ bindsym XF86AudioPrev exec playerctl previous
 # startup and postiion screens
 exec_always --no-startup-id xrandr --output DP-0 --off --output DP-1 --mode 1920x1080 --pos 0x0 --rotate left --rate 144.00 --output HDMI-0 --primary --mode 1920x1080 --pos 1080x420 --rotate normal --rate 144.00 --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off --output USB-C-0 --off
 # exec_always --no-startup-id xrandr --output DP-1 --rate 144.00 --mode 1920x1080 --rotate left --output HDMI-0 --rate 144.0 --mode 1920x1080 --rotate normal --primary --output HDMI-0 --right-of DP-1
-exec_always --no-startup-id feh --bg-scale /home/james/.config/i3/background.png
+exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/background.png
 
 # dont sleep
 exec_always --no-startup-id xset s off
