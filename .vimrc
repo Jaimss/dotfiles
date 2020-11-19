@@ -1,4 +1,15 @@
+filetype plugin indent on
 syntax on
+
+set backspace=indent,eol,start
+
+" ~/ cleanup
+set undodir=$XDG_DATA_HOME/vim/undo
+set directory=$XDG_DATA_HOME/vim/swap
+set backupdir=$XDG_DATA_HOME/vim/backup
+set viewdir=$XDG_DATA_HOME/vim/view
+set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
 
 " search / case
 set ignorecase
@@ -14,8 +25,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set nowrap
-
-filetype plugin indent on
 
 " line numbers
 set number
@@ -37,14 +46,6 @@ endfor
 set noswapfile
 set nobackup
 set undofile
-" undo directory (1st for my windows location, second for linux)
-" if someone copies this you gotta change these prob
-if isdirectory('D:\Installs\Vim\undodir')
-    set undodir=D:\Installs\Vim\undodir
-endif
-if isdirectory('/home/james/.vim/undodir')
-    set undodir=/home/james/.vim/undodir
-endif
 
 " cursor for vimrc
 let &t_EI .= "\<Esc>[1 q"
@@ -139,9 +140,6 @@ Plug 'morhetz/gruvbox'
 " linting
 Plug 'maralla/validator.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-
-" dev elara plugin
-" Plug '/home/james/Documents/GithubStuff/Jaims/elara-vimsyntax'
 
 call plug#end()
 

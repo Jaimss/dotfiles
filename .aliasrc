@@ -4,6 +4,8 @@ alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
+alias la="ls -Alh"
+
 # an extract method
 function extract {
  if [ -z "$1" ]; then
