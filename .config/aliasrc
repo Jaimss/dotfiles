@@ -4,7 +4,15 @@ alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
+alias cl="clear"
+
+alias google="python3 /home/james/Documents/GithubStuff/Jaims/google-cli/google-cli.py"
+alias ls="ls -hN --color=auto --group-directories-first"
+
 alias la="ls -Alh"
+
+alias mkd="mkdir -pv"
+alias g="git"
 
 # an extract method
 function extract {

@@ -2,7 +2,7 @@
 export ZSH="$XDG_CONFIG_HOME/zsh/.oh-my-zsh"
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
 
 # manage zsh plugins
 plugins=(
