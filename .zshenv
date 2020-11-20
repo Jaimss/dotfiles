@@ -1,6 +1,8 @@
 # default programs
 export EDITOR="vim"
 
+export PATH="$HOME/.config/scripts:$PATH"
+
 # maven
 export M2_HOME="/opt/maven"
 export PATH="$M2_HOME/bin:$PATH"
@@ -22,3 +24,11 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
 export WINEPREFIX="$XGD_DATA_HOME/wineprefixes/default"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
+# from .profile
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
