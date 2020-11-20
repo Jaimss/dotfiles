@@ -1,5 +1,7 @@
-filetype plugin indent on
 syntax on
+filetype plugin indent on
+
+set mouse=a
 
 set backspace=indent,eol,start
 
