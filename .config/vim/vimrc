@@ -3,6 +3,8 @@ filetype plugin indent on
 
 set mouse=a
 
+set clipboard=unnamedplus
+
 set backspace=indent,eol,start
 
 " ~/ cleanup
