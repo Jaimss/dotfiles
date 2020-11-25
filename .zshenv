@@ -2,6 +2,7 @@
 export EDITOR="vim"
 
 export PATH="$HOME/.config/scripts:$PATH"
+export LC_ALL=C
 
 # maven
 export M2_HOME="/opt/maven"
