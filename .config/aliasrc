@@ -4,9 +4,12 @@ alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
+alias n="nnn -eH"
+
+alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
+
 alias cl="clear"
 
-alias google="python3 /home/james/Documents/GithubStuff/Jaims/google-cli/google-cli.py"
 alias ls="ls -hN --color=auto --group-directories-first"
 
 alias la="ls -Alh"
