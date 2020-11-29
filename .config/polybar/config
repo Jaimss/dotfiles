@@ -1,10 +1,10 @@
 ; vim: ft=cfg & syntax = dosini
 [colors]
-bg = #2f343f
-bg-darker = #22262e
-white = #dfdfdf
-blue = #15f9f2
-alert = #bd2c40
+bg = #555753
+bg-darker = #2E3436
+white = #eeeeec
+blue = #b0deff
+alert = #bd574e
 
 ;;; SECONDARY MONITOR BAR || SECONDARY MONITOR BAR ;;;
 [bar/secondary]
@@ -13,25 +13,28 @@ monitor = ${env:MONITOR:DP-1}
 width = 100%
 height = 27
 fixed-center = true
-
-background = ${colors.bg}
+background = #00000000
 foreground = ${colors.white}
-
+; border
+border-color = #00000000
+border-left = 10
+border-bottom = 10
+border-right = 10
+radius = 5
 line-size = 3
 line-color = #f00
-
+; fonts
 font-0 = "SFNS Display:style=Bold:size=10;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
-
+; modules
 modules-left = i3
-modules-right = date
-
+modules-center = date
+modules-right = memory cpu powermenu
+; behaviors
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
-
 cursor-click = pointer
-cursor-scroll = ns-resize
 
 ;;; MAIN BAR || MAIN BAR ;;;
 [bar/main]
@@ -40,8 +43,14 @@ monitor = ${env:MONITOR:HDMI-0}
 width = 100%
 height = 27
 fixed-center = true
- background = ${colors.bg}
+background = #00000000
 foreground = ${colors.white}
+; border
+border-color = #00000000
+border-bottom = 10
+border-left = 10
+border-right = 10
+radius = 5
 ; system tray
 tray-position = right
 tray-padding = 3

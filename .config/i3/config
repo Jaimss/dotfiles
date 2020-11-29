@@ -1,10 +1,10 @@
 # variables
-set $bg-color 	            #2f343f
-set $blue                   #15f9f2
-set $inactive-bg-color      #22262e
-set $text-color             #f3f4f5
-set $inactive-text-color    #676E7D
-set $urgent-bg-color        #bd2c40
+set $bg-color 	            #2E3436
+set $blue                   #b0deff
+set $inactive-bg-color      #555753
+set $text-color             #EEEEEC
+set $inactive-text-color    #D3D7CF
+set $urgent-bg-color        #BD574E
 set $ws1                    "1"
 set $ws2                    "2"
 set $ws3                    "3"
@@ -136,7 +136,7 @@ exec --no-startup-id discord
 exec --no-startup-id spotify
 # displays & bg
 exec_always --no-startup-id xrandr --output $secondaryMonitor --mode 1920x1080 --pos 0x0 --rotate left --rate 144.00 --output $primaryMonitor --primary --mode 1920x1080 --pos 1080x420 --rotate normal --rate 144.00
-exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/background.png
+exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg
 # displays don't sleep
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
