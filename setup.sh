@@ -6,7 +6,7 @@
 ###########################
 # a few of the folders are created below in the Symlink section
 # because they are directly linked to the dotfiles
-echo "Creating all necessary folders so ~/ will be cleaner"
+echo "Creating necessary folders"
 # zsh
 mkdir -p $XDG_DATA_HOME/zsh
 # gnupg
