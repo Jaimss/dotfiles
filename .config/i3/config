@@ -34,15 +34,19 @@ font pango:System San Francisco Display 13
 # assign apps
 assign [class="Gnome-terminal"] $ws1
 assign [class="Google-chrome"] $ws2
+assign [class="discord"] $ws9
+for_window [class="Spotify"] move window to workspace $ws10
+# code
 assign [class="jetbrains-*"] $ws3
 assign [class="Code"] $ws3
+# school
 assign [class="zoom"] $ws4
+# games
 assign [class="steam_app_*"] $ws3
+assign [class="Lutris"] $ws4
 assign [class="Steam"] $ws4
 assign [class="minecraft-launcher"] $ws4
 assign [class="Minecraft *"] $ws3
-assign [class="discord"] $ws9
-for_window [class="Spotify"] move window to workspace $ws10
 # assign workspaces
 workspace $ws1 output $primaryMonitor
 workspace $ws2 output $primaryMonitor
