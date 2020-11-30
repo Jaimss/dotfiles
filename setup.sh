@@ -70,6 +70,9 @@ sudo apt install rofi -y
 sudo apt install zsh -y
 sudo apt install i3 i3-gaps i3lock -y
 sudo apt install vim -y
+sudo apt install playerctl -y
+sudo apt install xclip -y
+sudo apt install xrandr -y
 
 echo "Setting ZSH to default shell"
 chsh -s $(which zsh)

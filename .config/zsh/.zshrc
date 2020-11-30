@@ -2,6 +2,9 @@
 export ZSH="$XDG_CONFIG_HOME/zsh/ohmyzsh"
 export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
 
+# ignore permissions things for root user
+ZSH_DISABLE_COMPFIX=true
+
 ZSH_THEME="awesomepanda"
 
 source $ZSH/oh-my-zsh.sh
