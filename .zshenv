@@ -7,6 +7,7 @@ export EDITOR="vim"
 
 export PATH="$XDG_CONFIG_HOME/scripts:$PATH"
 export LC_ALL=C
+export LC_CTYPE=en_US.UTF-8
 
 # maven
 export PATH="$XDG_CONFIG_HOME/maven/apache-maven-3.6.3/bin:$PATH"

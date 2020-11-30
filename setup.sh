@@ -42,18 +42,18 @@ mkdir -p $XDG_DATA_HOME/wineprefixes
 ###################
 echo "Symlinking dotfiles to correct locations"
 # zshenv
-ln -s .zshenv $HOME/.zshenv
+ln -s "$(realpath .zshenv)" $HOME/.zshenv
 # local
-ln -s .local/share/fonts $XDG_DATA_HOME/fonts
+ln -s "$(realpath .local/share/fonts)" $XDG_DATA_HOME/fonts
 # config
-ln -s .config/i3 $XDG_CONFIG_HOME/i3
-ln -s .config/polybar $XDG_CONFIG_HOME/polybar
-ln -s .config/rofi $XDG_CONFIG_HOME/rofi
-ln -s .config/vim $XDG_CONFIG_HOME/vim
-ln -s .config/zsh $XDG_CONFIG_HOME/zsh
-ln -s .config/user-dirs.dirs $XDG_CONFIG_HOME/user-dirs.dirs
-ln -s .config/compton.conf $XDG_CONFIG_HOME/compton.conf
-ln -s .config/aliasrc $XDG_CONFIG_HOME/aliasrc
+ln -s "$(realpath .config/i3)" $XDG_CONFIG_HOME/i3
+ln -s "$(realpath .config/polybar)" $XDG_CONFIG_HOME/polybar
+ln -s "$(realpath .config/rofi)" $XDG_CONFIG_HOME/rofi
+ln -s "$(realpath .config/vim)" $XDG_CONFIG_HOME/vim
+ln -s "$(realpath .config/zsh)" $XDG_CONFIG_HOME/zsh
+ln -s "$(realpath .config/user-dirs.dirs)" $XDG_CONFIG_HOME/user-dirs.dirs
+ln -s "$(realpath .config/compton.conf)" $XDG_CONFIG_HOME/compton.conf
+ln -s "$(realpath .config/aliasrc)" $XDG_CONFIG_HOME/aliasrc
 
 ####################
 # Install Programs #
