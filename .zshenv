@@ -2,6 +2,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# monitors
+export MONITOR_PRIMARY="HDMI-0"
+export MONITOR_SECONDARY="DP-1"
+
 # default programs
 export EDITOR="vim"
 
