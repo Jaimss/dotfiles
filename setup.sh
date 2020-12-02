@@ -64,7 +64,10 @@ sudo add-apt-repository ppa:kgilmer/speed-ricer
 sudo apt update
 
 echo "Installing Programs"
-sudo apt install i3 i3-gaps i3lock compton polybar rofi zsh vim playerctl xclip xrandr neofetch -y
+sudo apt install i3 i3-gaps i3lock polybar rofi -y
+sudo apt install playerctl xclip xrandr -y
+sudo apt install zsh vim neofetch -y
+sudo apt install compton lxappearance -y
 
 echo "Setting ZSH to default shell"
 chsh -s $(which zsh)
