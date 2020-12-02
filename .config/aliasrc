@@ -4,6 +4,8 @@ alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
+alias dots="cd ~/dox/GithubStuff/James/dotfiles"
+
 alias n="nnn -eH"
 
 alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
