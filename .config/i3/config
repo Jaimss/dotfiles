@@ -1,0 +1,173 @@
+# variables
+set $bg-color 	            #2E3436
+set $blue                   #b0deff
+set $inactive-bg-color      #555753
+set $text-color             #EEEEEC
+set $inactive-text-color    #D3D7CF
+set $urgent-bg-color        #BD574E
+set $ws1                    "1"
+set $ws2                    "2"
+set $ws3                    "3"
+set $ws4                    "4"
+set $ws5                    "5"
+set $ws6                    "6"
+set $ws7                    "7"
+set $ws8                    "8"
+set $ws9                    "9"
+set $ws10                   "10"
+set $primaryMonitor         "HDMI-0"
+set $secondaryMonitor       "DP-1"
+
+###########
+# Mod Key #
+###########
+set $mod Mod4
+
+########
+# Font #
+########
+font pango:System San Francisco Display 13
+
+################################
+# Screen/Window/Workspace mgmt #
+################################
+# assign apps
+assign [class="Gnome-terminal"] $ws1
+assign [class="Google-chrome"] $ws2
+assign [class="discord"] $ws9
+for_window [class="Spotify"] move window to workspace $ws10
+# code
+assign [class="jetbrains-*"] $ws3
+assign [class="Code"] $ws3
+# school
+assign [class="zoom"] $ws4
+# games
+assign [class="steam_app_*"] $ws3
+assign [class="Lutris"] $ws4
+assign [class="Steam"] $ws4
+assign [class="minecraft-launcher"] $ws4
+assign [class="Minecraft *"] $ws3
+# assign workspaces
+workspace $ws1 output $primaryMonitor
+workspace $ws2 output $primaryMonitor
+workspace $ws9 output $secondaryMonitor
+workspace $ws10 output $secondaryMonitor
+# gaps
+gaps outer 2
+gaps inner 10
+new_window pixel 0
+# border_radius 3
+# bg & multi monitor
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+###############
+# Keybindings #
+###############
+# open apps / manage them
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+F2 exec google-chrome
+bindsym $mod+q kill
+bindsym $mod+d exec rofi -show combi
+# lock screen
+bindsym $mod+Shift+x exec i3lock --color "$bg-color"
+# enable media controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# change split direction (g instead of default h for horizontal cause of vim binds for moving)
+bindsym $mod+g split h
+bindsym $mod+v split v
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# Screenshots
+bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png # fullscrenn
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png # active window
+bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png # seleciton
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+# move workspace to new monitor
+bindsym $mod+Ctrl+h move workspace to output left
+bindsym $mod+Ctrl+l move workspace to output right
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3
+bindsym $mod+Shift+e exit
+
+###########
+# Startup #
+###########
+# apps
+exec --no-startup-id gnome-terminal
+exec --no-startup-id google-chrome
+exec --no-startup-id discord
+exec --no-startup-id spotify
+# displays & bg
+exec_always --no-startup-id xrandr --output $secondaryMonitor --mode 1920x1080 --pos 0x0 --rotate left --rate 144.00 --output $primaryMonitor --primary --mode 1920x1080 --pos 1080x420 --rotate normal --rate 144.00
+exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg
+# displays don't sleep
+exec_always --no-startup-id xset s off
+exec_always --no-startup-id xset -dpms
+# polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# compton
+exec_always --no-startup-id compton --config /home/james/.config/compton.conf
+
+#######################
+# Modes/Mode Keybinds #
+#######################
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+########################
+# Window Color / Theme #
+########################
+#                       border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          #000D28
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #000D28
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #000D28
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #000D28
