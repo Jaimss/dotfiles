@@ -16,6 +16,7 @@ export LC_CTYPE=en_US.UTF-8
 # maven
 export PATH="$XDG_CONFIG_HOME/maven/apache-maven-3.6.3/bin:$PATH"
 export JAVA_HOME="$XDG_CONFIG_HOME/java/java_home/openjdk-15.0.1"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # ~/ cleanup
 source "$XDG_CONFIG_HOME/aliasrc"
@@ -39,3 +40,4 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 neofetch
+export GPG_TTY=$(tty)
