@@ -46,7 +46,7 @@ assign [class="steam_app_*"] $ws3
 assign [class="Lutris"] $ws4
 assign [class="Steam"] $ws4
 assign [class="minecraft-launcher"] $ws4
-assign [class="Minecraft *"] $ws3
+assign [class="Minecraft *"] $ws4
 # assign workspaces
 workspace $ws1 output $primaryMonitor
 workspace $ws2 output $primaryMonitor
