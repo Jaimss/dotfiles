@@ -7,6 +7,17 @@ set clipboard=unnamedplus
 
 set backspace=indent,eol,start
 
+" snippets
+let g:UltiSnipsSnippetsDir = "~/.config/vim/ultisnips"
+let g:UltiSnipsSnippetDirectories = ["~/.config/vim/ultisnips"]
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" latex
+nmap <C-w> :w!<cr> :!pdflatex --output-directory output %<cr><cr>
+nmap <C-h> :!zathura $(echo output/% \| sed 's/tex$/pdf/') & disown<cr><cr>
+
 " ~/ cleanup
 set undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
@@ -28,7 +39,9 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set autoindent
-set nowrap
+
+" line wrap
+set wrap linebreak nolist
 
 " line numbers
 set number
@@ -58,7 +71,7 @@ let &t_SI .= "\<Esc>[6 q"
 " no annoying error bells
 set noerrorbells
 set t_vb=
-set tm=500
+" set tm=500
 set visualbell
 
 " leader key
@@ -82,10 +95,10 @@ map <leader>k :wincmd k<cr>
 map <leader>l :wincmd l<cr>
 
 " manage tabs with leader+t etc 
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove<cr>
+" map <leader>tn :tabnew<cr>
+" map <leader>to :tabonly<cr>
+" map <leader>tc :tabclose<cr>
+" map <leader>tm :tabmove<cr>
 
 " system commands
 map <leader>s "*
@@ -144,6 +157,11 @@ Plug 'morhetz/gruvbox'
 " linting
 Plug 'maralla/validator.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" latex
+Plug 'lervag/vimtex'
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
