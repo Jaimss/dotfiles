@@ -19,12 +19,14 @@ export LC_CTYPE=en_US.UTF-8
 
 # maven
 export PATH="$XDG_CONFIG_HOME/maven/apache-maven-3.6.3/bin:$PATH"
-export JAVA_HOME="$XDG_CONFIG_HOME/java/java_home/openjdk-15.0.1"
+#export JAVA_HOME="$XDG_CONFIG_HOME/java/java_home/openjdk-15.0.1"
+export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # ~/ cleanup
 source "$XDG_CONFIG_HOME/aliasrc"
 
+export LEIN_HOME="$XDG_DATA_HOME/lein"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
