@@ -3,8 +3,8 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # sdkman
-export SDKMAN_DIR="$XDG_DATA_HOME/sdkman"
-source "$SDKMAN_DIR/bin/sdkman-init.sh"
+# export SDKMAN_DIR="$XDG_DATA_HOME/sdkman"
+# source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # monitors
 export MONITOR_PRIMARY="HDMI-0"
@@ -22,6 +22,7 @@ export PATH="$XDG_CONFIG_HOME/maven/apache-maven-3.6.3/bin:$PATH"
 #export JAVA_HOME="$XDG_CONFIG_HOME/java/java_home/openjdk-15.0.1"
 export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
 
 # ~/ cleanup
 source "$XDG_CONFIG_HOME/aliasrc"
@@ -45,5 +46,4 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-neofetch
 export GPG_TTY=$(tty)

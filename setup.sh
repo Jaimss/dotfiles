@@ -7,11 +7,16 @@
 # a few of the folders are created below in the Symlink section
 # because they are directly linked to the dotfiles
 echo "Creating necessary folders"
+
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 # zsh
 mkdir -p $XDG_DATA_HOME/zsh
 # gnupg
 mkdir -p $XDG_DATA_HOME/gnupg
-gpg --homedir $XDG_DATA_HOME/gnupg
+# gpg --homedir $XDG_DATA_HOME/gnupg
 chown -R $(whoami) $XDG_DATA_HOME/gnupg
 chmod 600 $XDG_DATA_HOME/gnupg/*
 chmod 700 $XDG_DATA_HOME/gnupg
@@ -66,7 +71,7 @@ sudo apt update
 echo "Installing Programs"
 sudo apt install i3 i3-gaps i3lock polybar rofi -y
 sudo apt install playerctl xclip xrandr -y
-sudo apt install zsh vim neofetch -y
+sudo apt install zsh python3-neovim neofetch -y
 sudo apt install compton lxappearance -y
 
 echo "Setting ZSH to default shell"

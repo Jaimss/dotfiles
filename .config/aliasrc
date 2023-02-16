@@ -4,7 +4,7 @@ alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
-alias dots="cd ~/dox/GithubStuff/James/dotfiles"
+alias clip="xclip -sel clip"
 
 alias n="nnn -eH"
 
@@ -18,6 +18,8 @@ alias la="ls -Alh"
 
 alias mkd="mkdir -pv"
 alias g="git"
+
+alias cal="calcurse"
 
 # an extract method
 function extract {

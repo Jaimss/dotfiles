@@ -7,6 +7,8 @@ set clipboard=unnamedplus
 
 set backspace=indent,eol,start
 
+let g:python3_host_prog = '/usr/bin/python3'
+
 " snippets
 let g:UltiSnipsSnippetsDir = "~/.config/vim/ultisnips"
 let g:UltiSnipsSnippetDirectories = ["~/.config/vim/ultisnips"]
@@ -15,8 +17,10 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " latex
-nmap <C-w> :w!<cr> :!pdflatex --output-directory output %<cr><cr>
+nmap <C-w> :w!<cr> :!pdflatex --output-directory output %<cr>
 nmap <C-h> :!zathura $(echo output/% \| sed 's/tex$/pdf/') & disown<cr><cr>
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 " ~/ cleanup
 set undodir=$XDG_DATA_HOME/vim/undo
@@ -149,31 +153,16 @@ Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
 Plug 'vim-python/python-syntax'
 Plug 'nvie/vim-flake8'
-" Docker
-Plug 'ekalinin/Dockerfile.vim'
-" theme
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
-Plug 'morhetz/gruvbox'
 " linting
-Plug 'maralla/validator.vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " latex
 Plug 'lervag/vimtex'
 " snippets
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 call plug#end()
 
 " color scheme
 set termguicolors
 set bg=dark
-
-" for gruvbox
-" colorscheme gruvbox
-" let g:airline_theme='gruvbox'
-
-" for onehalf
-colorscheme onehalfdark
-let g:airline_theme='onehalfdark'
 

@@ -1,4 +1,4 @@
-; vim: ft=cfg & syntax = dosini
+; vim: ft=cfg
 [colors]
 bg = #555753
 bg-darker = #2E3436
@@ -8,29 +8,32 @@ alert = #bd574e
 
 ;;; SECONDARY MONITOR BAR || SECONDARY MONITOR BAR ;;;
 [bar/secondary]
-bottom = true
-monitor = ${env:MONITOR:DP-1}
+dpi=220
+monitor = ${env:MONITOR:DP-3}
 width = 100%
-height = 27
+height = 75
 fixed-center = true
-background = #00000000
+background = ${colors.bg-darker}
 foreground = ${colors.white}
 ; border
+line-size = 10
 border-color = #00000000
-border-left = 10
-border-bottom = 10
-border-right = 10
-radius = 5
-line-size = 3
-line-color = #f00
+border-top = 25
+border-left = 100
+border-right = 100
+border-bottom = 5
+padding-right = 10
+padding-left = 7
+radius = 35
 ; fonts
 font-0 = "SFNS Display:style=Bold:size=10;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
 ; modules
-modules-left = i3
+modules-left = i3 pulseaudio
 modules-center = date
-modules-right = memory cpu powermenu
+modules-right = memory cpu battery
+module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -38,25 +41,29 @@ cursor-click = pointer
 
 ;;; MAIN BAR || MAIN BAR ;;;
 [bar/main]
-bottom = true
-monitor = ${env:MONITOR:HDMI-0}
+dpi=220
+monitor = ${env:MONITOR:eDP-1}
 width = 100%
-height = 27
+height = 75
 fixed-center = true
-background = #00000000
+background = ${colors.bg-darker}
 foreground = ${colors.white}
 ; border
+line-size = 10
 border-color = #00000000
-border-bottom = 10
-border-left = 10
-border-right = 10
-radius = 5
+border-top = 25
+border-bottom = 5
+border-left = 100
+border-right = 100
+radius = 35
+padding-left = 7
+padding-right = 10
 ; system tray
-tray-position = right
-tray-padding = 3
-tray-background = ${colors.bg-darker}
-line-size = 3
-line-color = #f00
+; tray-position = right
+; tray-padding = 3
+; tray-background = ${colors.bg-darker}
+; line-size = 3
+; line-color = #f00
 ; fonts
 font-0 = "SFNS Display:style=Bold:size=10;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
@@ -64,7 +71,8 @@ font-2 = "Font Awesome 5 Brands:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = memory cpu powermenu
+modules-right = memory cpu battery
+module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -82,17 +90,16 @@ strip-wsnumbers = true
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 ; labels
-label-mode-padding = 2
-label-mode-foreground = #000
-label-mode-background = ${colors.blue}
+;label-mode-padding = 2
+;label-mode-foreground = #000
+;label-mode-background = ${colors.blue}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${colors.bg-darker}
-label-focused-underline= ${colors.blue}
+label-focused-underline = ${colors.blue}
 label-focused-padding = 2
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-background = ${self.label-focused-background} 
+;label-unfocused-background = ${self.label-focused-background} 
 label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -101,7 +108,7 @@ label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.alert}
 label-urgent-padding = 2
 
 [module/cpu]
@@ -122,11 +129,11 @@ label = "  %percentage_used%% "
 type = internal/date
 interval = 1
 
-date = " %m/%d/%y"
-date-alt = " %m/%d/%y"
+date = " %a %d %b"
+date-alt = " %a %d %b"
 
-time = %r
-time-alt = %r
+time = "%l:%M%P"
+time-alt = "%l:%M:%S%P"
 
 format-prefix = 
 format-foreground = ${colors.blue}
@@ -135,8 +142,73 @@ format-padding = 2
 
 label = %date% %time%
 
+[module/battery]
+type = internal/battery
+
+full-at = 99
+low-at = 20
+
+battery = BAT0
+adapter = AC
+
+poll-interval = 5
+
+format-charging-foreground = ${colors.blue}
+format-charging-background = ${colors.bg-darker}
+format-discharging-foreground = ${colors.blue}
+format-discharging-background = ${colors.bg-darker}
+format-low-foreground = ${colors.blue}
+format-low-background = ${colors.bg-darker}
+format-full-foreground = ${colors.blue}
+format-full-background = ${colors.bg-darker}
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-low = <label-low> <animation-low>
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full =  %percentage%%
+label-low = %percentage%%
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+; Only applies if <bar-capacity> is used
+bar-capacity-width = 10
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+; Framerate in milliseconds
+animation-discharging-framerate = 500
+
+; Only applies if <animation-low> is used
+; New in version 3.6.0
+animation-low-0 = !
+animation-low-1 = 
+animation-low-framerate = 200
+
 [settings]
 screenchange-reload = true
+pseudo-transparency = true
 
 [global/wm]
 margin-top = 0

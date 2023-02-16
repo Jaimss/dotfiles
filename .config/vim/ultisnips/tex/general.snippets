@@ -1,0 +1,90 @@
+# Tables
+snippet tabular "tabular environment"
+\\begin{${1:tabular}}{${2:c}}
+	${0:${VISUAL}}
+\\end{$1}
+endsnippet
+
+snippet center "centered"
+\\begin{center}
+	$1
+\\end{center}
+endsnippet
+
+# Enumerate
+snippet enum "enumerate environment"
+\\begin{enumerate}
+	\\item ${1}
+	${0:rit }
+\\end{enumerate}
+endsnippet
+snippet enuma "enumerate environment (a)"
+\\begin{enumerate}[(a)]
+	\\item ${1}
+	${0:rit }
+\\end{enumerate}
+endsnippet
+snippet enumi "enumerate environment (i)"
+\\begin{enumerate}[(i)]
+	\\item ${1}
+	${0:rit }
+\\end{enumerate}
+endsnippet
+
+# Itemize
+snippet item "itemize environment"
+\\begin{itemize}
+	\\item ${1}
+	${0:rit }
+\\end{itemize}
+endsnippet
+snippet it "\item"
+\\item ${1:${VISUAL}}
+endsnippet
+snippet rit "\item (recursive)"
+\\item $1
+${0:rit }
+endsnippet
+
+# Sections, Chapters, Etc
+snippet cha "chapter"
+\\chapter{$1}
+$0
+endsnippet
+snippet sec "section"
+\\section{$1}
+$0
+endsnippet
+snippet sec* "section w/o number"
+\\section*{$1}
+$0
+endsnippet
+snippet sub "subsection"
+\\subsection{$1}
+$0
+endsnippet
+snippet sub* "subsection w/o number"
+\\subsection*{$1}
+$0
+endsnippet
+snippet ssub "subsubsection"
+\\subsubsection{$1}
+$0
+endsnippet
+snippet ssub* "subsubsection w/o number"
+\\subsubsection*{$1}
+$0
+endsnippet
+
+# Paragraph Options
+snippet par "paragraph"
+\\paragraph{$1}
+$0
+endsnippet
+snippet subp "subparagraph"
+\\subparagraph{$1}
+$0
+endsnippet
+snippet ni "noindent"
+\\noindent
+endsnippet

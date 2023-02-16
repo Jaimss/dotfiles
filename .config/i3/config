@@ -15,8 +15,8 @@ set $ws7                    "7"
 set $ws8                    "8"
 set $ws9                    "9"
 set $ws10                   "10"
-set $primaryMonitor         "HDMI-0"
-set $secondaryMonitor       "DP-1"
+set $primaryMonitor         "eDP-1"
+set $secondaryMonitor       "DP-3"
 
 ###########
 # Mod Key #
@@ -31,9 +31,15 @@ font pango:System San Francisco Display 13
 ################################
 # Screen/Window/Workspace mgmt #
 ################################
+#make some things float
+for_window [class="Inkscape"] floating enable
+for_window [class="1Password"] floating enable
 # assign apps
 assign [class="Gnome-terminal"] $ws1
+assign [class="Alacritty"] $ws1
 assign [class="Google-chrome"] $ws2
+assign [class="firefox"] $ws2
+assign [class="Mail"] $ws3
 assign [class="discord"] $ws9
 for_window [class="Spotify"] move window to workspace $ws10
 # code
@@ -53,7 +59,7 @@ workspace $ws2 output $primaryMonitor
 workspace $ws9 output $secondaryMonitor
 workspace $ws10 output $secondaryMonitor
 # gaps
-gaps outer 2
+gaps outer 10
 gaps inner 10
 new_window pixel 0
 # border_radius 3
@@ -66,13 +72,22 @@ floating_modifier $mod
 ###############
 # open apps / manage them
 bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+F2 exec google-chrome
+#bindsym $mod+F2 exec google-chrome
+bindsym $mod+F2 exec firefox
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show combi
 # lock screen
 bindsym $mod+Shift+x exec i3lock --color "$bg-color"
-# enable media controls
+# Pulse Audio controls
+bindsym XF86AudioMute exec amixer -D pulse set 'Master' 1+ toggle
+bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
+bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+# Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 # change focus
@@ -134,20 +149,20 @@ bindsym $mod+Shift+e exit
 # Startup #
 ###########
 # apps
-exec --no-startup-id gnome-terminal
-exec --no-startup-id google-chrome
+exec --no-startup-id alacritty
+exec --no-startup-id firefox
 exec --no-startup-id discord
 exec --no-startup-id spotify
-# displays & bg
-exec_always --no-startup-id xrandr --output $secondaryMonitor --mode 1920x1080 --pos 0x0 --rotate left --rate 144.00 --output $primaryMonitor --primary --mode 1920x1080 --pos 1080x420 --rotate normal --rate 144.00
-exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg
 # displays don't sleep
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
+# compton
+# exec_always --no-startup-id compton --config /home/james/.config/compton.conf
+exec_always --no-startup-id $HOME/.config/i3/setupmonior.sh
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# compton
-exec_always --no-startup-id compton --config /home/james/.config/compton.conf
+# displays & bg
+exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg
 
 #######################
 # Modes/Mode Keybinds #
