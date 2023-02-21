@@ -21,6 +21,19 @@ alias g="git"
 
 alias cal="calcurse"
 
+# ranger 
+alias rg='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+# view notes pdf
+function vpdf {
+    if [ -z "$1" ]; then
+        zathura output/*.pdf & disown
+        exit 0
+    fi
+    zathura $1/output/*.pdf & disown
+}
+alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
+
 # an extract method
 function extract {
  if [ -z "$1" ]; then

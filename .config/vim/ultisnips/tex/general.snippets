@@ -1,38 +1,54 @@
 # Tables
-snippet tabular "tabular environment"
+snippet table "insert table" bA
+\begin{table}[H]
+	\\begin{tabular}{|${1:c}|}
+		\hline
+		$0
+		\hline
+	\\end{tabular}
+\end{table}
+endsnippet
+snippet tabular "tabular environment" bA
 \\begin{${1:tabular}}{${2:c}}
 	${0:${VISUAL}}
 \\end{$1}
 endsnippet
 
-snippet center "centered"
+snippet center "centered" bA
 \\begin{center}
 	$1
 \\end{center}
 endsnippet
 
+# general env
+snippet beg "begin / end environment" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
 # Enumerate
-snippet enum "enumerate environment"
+snippet enum "enumerate environment" bA
 \\begin{enumerate}
 	\\item ${1}
 	${0:rit }
 \\end{enumerate}
 endsnippet
-snippet enuma "enumerate environment (a)"
-\\begin{enumerate}[(a)]
-	\\item ${1}
+snippet enuma "enumerate environment (a)" bA
+\\begin{enumerate}[{$1:(a)}]
+	\\item $2
 	${0:rit }
 \\end{enumerate}
 endsnippet
-snippet enumi "enumerate environment (i)"
-\\begin{enumerate}[(i)]
-	\\item ${1}
+snippet enumi "enumerate environment (i)" bA
+\\begin{enumerate}[{$1:(i)}]
+	\\item $2
 	${0:rit }
 \\end{enumerate}
 endsnippet
 
 # Itemize
-snippet item "itemize environment"
+snippet item "itemize environment" bA
 \\begin{itemize}
 	\\item ${1}
 	${0:rit }
@@ -47,11 +63,11 @@ ${0:rit }
 endsnippet
 
 # Sections, Chapters, Etc
-snippet cha "chapter"
+snippet cha "chapter" 
 \\chapter{$1}
 $0
 endsnippet
-snippet sec "section"
+snippet sec "section" 
 \\section{$1}
 $0
 endsnippet
@@ -86,5 +102,19 @@ snippet subp "subparagraph"
 $0
 endsnippet
 snippet ni "noindent"
-\\noindent
+\\noindent 
+endsnippet
+
+# Text Formatting
+snippet tb "bold text"
+\textbf{$1}$0
+endsnippet
+snippet ti "italic text"
+\textit{$1}$0
+endsnippet
+snippet tu "underline text"
+\underline{$1}$0
+endsnippet
+snippet tdu "double underline"
+\underline{\underline{$1}}$0
 endsnippet

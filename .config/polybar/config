@@ -18,19 +18,23 @@ foreground = ${colors.white}
 ; border
 line-size = 10
 border-color = #00000000
-border-top = 25
-border-left = 100
-border-right = 100
-border-bottom = 5
+border-top-size = 25
+border-left-size = 100
+border-right-size = 100
+border-bottom-size = 5
 padding-right = 10
 padding-left = 7
 radius = 35
 ; fonts
 font-0 = "SFNS Display:style=Bold:size=10;1"
-font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-2 = "Font Awesome 5 Brands:size=10;1"
+font-1 = "Font Awesome 6 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 6 Brands:size=10;1"
+font-3 = "Font Awesome 6 Regular:size=10;1"
+font-4 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-5 = "Font Awesome 5 Brands:size=10;1"
+font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
-modules-left = i3 pulseaudio
+modules-left = i3
 modules-center = date
 modules-right = memory cpu battery
 module-margin = 4
@@ -51,10 +55,10 @@ foreground = ${colors.white}
 ; border
 line-size = 10
 border-color = #00000000
-border-top = 25
-border-bottom = 5
-border-left = 100
-border-right = 100
+border-top-size = 25
+border-bottom-size = 5
+border-left-size = 100
+border-right-size = 100
 radius = 35
 padding-left = 7
 padding-right = 10
@@ -66,12 +70,16 @@ padding-right = 10
 ; line-color = #f00
 ; fonts
 font-0 = "SFNS Display:style=Bold:size=10;1"
-font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
-font-2 = "Font Awesome 5 Brands:size=10;1"
+font-1 = "Font Awesome 6 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 6 Brands:size=10;1"
+font-3 = "Font Awesome 6 Regular:size=10;1"
+font-4 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-5 = "Font Awesome 5 Brands:size=10;1"
+font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = memory cpu battery
+modules-right = wireless wired memory cpu battery
 module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
@@ -103,7 +111,6 @@ label-unfocused = %index%
 label-unfocused-padding = 2
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
@@ -205,6 +212,51 @@ animation-discharging-framerate = 500
 animation-low-0 = !
 animation-low-1 = 
 animation-low-framerate = 200
+
+[module/wireless]
+type = internal/network
+interface = wlp0s20f3
+
+interface-type = wireless
+interval = 3.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <label-connected>
+
+label-connected =   %downspeed%
+label-connected-foreground = ${colors.blue}
+
+; Default: (none)
+label-disconnected = 
+label-disconnected-foreground = ${colors.blue}
+
+; Default: (none)
+;label-packetloss = %essid%
+;label-packetloss-foreground = #eefafafa
+
+
+[module/wired]
+type = internal/network
+interface = enx00e04c680ce2
+
+interface-type = wired
+interval = 3.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <label-connected>
+
+label-connected =  %downspeed%
+label-connected-foreground = ${colors.blue}
+
+; Default: (none)
+; label-disconnected =N/a
+; label-disconnected-foreground = ${colors.blue}
 
 [settings]
 screenchange-reload = true

@@ -7,6 +7,11 @@ set clipboard=unnamedplus
 
 set backspace=indent,eol,start
 
+"fix spelling
+setlocal spell
+set spelllang=en_us
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+
 let g:python3_host_prog = '/usr/bin/python3'
 
 " snippets
@@ -17,7 +22,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " latex
-nmap <C-w> :w!<cr> :!pdflatex --output-directory output %<cr>
+nmap <C-w> :w!<cr> :!pdflatex -shell-escape --output-directory output %<cr>
 nmap <C-h> :!zathura $(echo output/% \| sed 's/tex$/pdf/') & disown<cr><cr>
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
