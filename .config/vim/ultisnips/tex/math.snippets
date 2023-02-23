@@ -2,7 +2,7 @@ global !p
 def math():
     return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 
-def comment(): 
+def comment():
     return vim.eval('vimtex#syntax#in_comment()') == '1'
 
 def env(name):
@@ -36,10 +36,20 @@ $1
 \] $0
 endsnippet
 
-#Fracts
+# fractions
 context "math()"
 snippet fr "Fraction" iA
 \frac{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "" wrA
+\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+context "math()"
+snippet / "Fraction" iA
+\\frac{${VISUAL}}{$1}$0
 endsnippet
 
 context "math()"
