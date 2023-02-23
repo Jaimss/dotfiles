@@ -51,7 +51,7 @@ endsnippet
 snippet item "itemize environment" bA
 \\begin{itemize}
 	\\item ${1}
-	${0:rit }
+	${0:rit}
 \\end{itemize}
 endsnippet
 snippet it "\item"
@@ -59,45 +59,33 @@ snippet it "\item"
 endsnippet
 snippet rit "\item (recursive)"
 \\item $1
-${0:rit }
+${0:rit}
 endsnippet
 
 # Sections, Chapters, Etc
-snippet cha "chapter" 
+snippet cha "chapter" bA
 \\chapter{$1}
 $0
 endsnippet
-snippet sec "section" 
+snippet sec "section" bA
 \\section{$1}
 $0
 endsnippet
-snippet sec* "section w/o number"
-\\section*{$1}
-$0
-endsnippet
-snippet sub "subsection"
+snippet sub "subsection" bA
 \\subsection{$1}
 $0
 endsnippet
-snippet sub* "subsection w/o number"
-\\subsection*{$1}
-$0
-endsnippet
-snippet ssub "subsubsection"
+snippet ssub "subsubsection" bA
 \\subsubsection{$1}
-$0
-endsnippet
-snippet ssub* "subsubsection w/o number"
-\\subsubsection*{$1}
 $0
 endsnippet
 
 # Paragraph Options
-snippet par "paragraph"
+snippet par "paragraph" bA
 \\paragraph{$1}
 $0
 endsnippet
-snippet subp "subparagraph"
+snippet subp "subparagraph" bA
 \\subparagraph{$1}
 $0
 endsnippet
@@ -106,15 +94,15 @@ snippet ni "noindent"
 endsnippet
 
 # Text Formatting
-snippet tb "bold text"
+snippet tb "bold text" i
 \textbf{$1}$0
 endsnippet
-snippet ti "italic text"
+snippet ti "italic text" i
 \textit{$1}$0
 endsnippet
-snippet tu "underline text"
+snippet tu "underline text" i
 \underline{$1}$0
 endsnippet
-snippet tdu "double underline"
+snippet tdu "double underline" i
 \underline{\underline{$1}}$0
 endsnippet

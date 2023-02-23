@@ -27,10 +27,10 @@ alias rg='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; c
 # view notes pdf
 function vpdf {
     if [ -z "$1" ]; then
-        zathura output/*.pdf & disown
+        zathura output/*.pdf &
         exit 0
     fi
-    zathura $1/output/*.pdf & disown
+    zathura $1/output/*.pdf &
 }
 alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
 

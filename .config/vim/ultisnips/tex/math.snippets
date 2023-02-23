@@ -1,33 +1,112 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def comment(): 
+    return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+def env(name):
+    [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
+    return x != '0' and x != '0'
+
+endglobal
+
+context "math()"
 snippet int "Regular Integral"
 \int_{$1}^{$2} { $3 } \:dx
 endsnippet
 
+context "math()"
 snippet iint "Inline integral"
 $\int_{$1}^{$2} { $3 } \:dx$
 endsnippet
 
-snippet eq "Equation"
-$$$0$$
+snippet mk "Math Inline" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
 endsnippet
 
-snippet ieq "Inline Equation"
-$$0$
+snippet dm "Normal Math" wA
+\[
+$1
+\] $0
 endsnippet
 
 #Fracts
-snippet fr "Fraction"
-\frac{$1}{$2}
+context "math()"
+snippet fr "Fraction" iA
+\frac{$1}{$2}$0
 endsnippet
 
-snippet x "\times"
+context "math()"
+snippet x "\times" i
 \times 
 endsnippet
 
-snippet e "x 10^{..}"
+context "math()"
+snippet e "x 10^{..}" i
 \times 10^{$1} $0
 endsnippet
 
-snippet nt "Normal Text (in math mode)"
+context "math()"
+snippet '([0-9])e' "x 10^{..}" irA
+`!p snip.rv= match.group(1)` \times 10^{$1} $0
+endsnippet
+
+context "math()"
+snippet nt "Normal Text (in math mode)" iA
 \text{$1}$0
 endsnippet
 
+# Subscripts & Exponents
+context "math()"
+snippet '([A-Za-z0-9]+)\^([\-0-9a-zA-Z]{2,})' "auto exponent" wrA
+`!p snip.rv = match.group(1)`^{`!p snip.rv = match.group(2)`$1}$0
+endsnippet
+
+context "math()"
+snippet '([A-Za-z0-9]+)_([\-0-9a-zA-Z]{2,})' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`$1}$0
+endsnippet
+
+priority 1000
+context "math()"
+snippet '([A-Za-z0-9]+)\^nt' "auto exponent" wrA
+`!p snip.rv = match.group(1)`^\text{$1}$0
+endsnippet
+
+priority 1000
+context "math()"
+snippet '([A-Za-z0-9]+)_nt' "auto subscript" wrA
+`!p snip.rv = match.group(1)`_\text{$1}$0
+endsnippet
+
+#Arrows
+context "math()"
+snippet ra "rightarrow" w
+\rightarrow
+endsnippet
+
+context "math()"
+snippet la "left arrow" w
+\leftarrow
+endsnippet
+
+context "math()"
+snippet lra "left right arrow" w
+\leftrightarrow
+endsnippet
+
+context "math()"
+snippet da "down arrow" w
+\downarrow
+endsnippet
+
+context "math()"
+snippet ua "up arrow" w
+\uparrow
+endsnippet
