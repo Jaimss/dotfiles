@@ -41,6 +41,10 @@ assign [class="Google-chrome"] $ws2
 assign [class="firefox"] $ws2
 assign [class="discord"] $ws9
 for_window [class="Spotify"] move window to workspace $ws10
+#email
+assign [class="evolution"] $ws4
+assign [class="thunderbird"] $ws4
+assign [class="mailspring"] $ws4
 # code
 assign [class="jetbrains-*"] $ws3
 assign [class="Code"] $ws3
@@ -48,10 +52,10 @@ assign [class="Code"] $ws3
 assign [class="zoom"] $ws4
 # games
 assign [class="steam_app_*"] $ws3
-assign [class="Lutris"] $ws4
-assign [class="Steam"] $ws4
-assign [class="minecraft-launcher"] $ws4
-assign [class="Minecraft *"] $ws4
+assign [class="Lutris"] $ws5
+assign [class="Steam"] $ws5
+assign [class="minecraft-launcher"] $ws5
+assign [class="Minecraft *"] $ws5
 # assign workspaces
 workspace $ws1 output $primaryMonitor
 workspace $ws2 output $primaryMonitor
@@ -70,10 +74,12 @@ floating_modifier $mod
 # Keybindings #
 ###############
 # reminder
-bindsym $mod+p exec notify-send "Reminders" "CS252 Participation ID: 51"
+bindsym $mod+p exec notify-send "Reminders" "$(cat ~/.config/reminders.txt)"
+bindsym $mod+b exec sh /home/james/.config/scripts/battery_notify.sh
 # open apps / manage them
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+F2 exec google-chrome-stable
+bindsym $mod+F4 exec thunderbird
 #bindsym $mod+F2 exec firefox
 bindsym $mod+q kill
 bindsym $mod+d exec rofi -show combi -show calc

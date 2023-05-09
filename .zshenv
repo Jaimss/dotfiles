@@ -20,7 +20,7 @@ export LC_CTYPE=en_US.UTF-8
 # maven
 export PATH="$XDG_CONFIG_HOME/maven/apache-maven-3.6.3/bin:$PATH"
 #export JAVA_HOME="$XDG_CONFIG_HOME/java/java_home/openjdk-15.0.1"
-export JAVA_HOME="$SDKMAN_DIR/candidates/java/current"
+export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 

@@ -28,7 +28,7 @@ snippet beg "begin / end environment" bA
 endsnippet
 
 # Enumerate
-snippet enum "enumerate environment" bA
+snippet enumn "enumerate environment (1.)" bA
 \\begin{enumerate}
 	\\item ${1}
 	${0:rit }
@@ -51,15 +51,17 @@ endsnippet
 snippet item "itemize environment" bA
 \\begin{itemize}
 	\\item ${1}
-	${0:rit}
+	${0:rit }
 \\end{itemize}
 endsnippet
+
 snippet it "\item"
 \\item ${1:${VISUAL}}
 endsnippet
-snippet rit "\item (recursive)"
+
+snippet rit "\item (recursive)" bA
 \\item $1
-${0:rit}
+${0:rit }
 endsnippet
 
 # Sections, Chapters, Etc
@@ -95,14 +97,32 @@ endsnippet
 
 # Text Formatting
 snippet tb "bold text" i
-\textbf{$1}$0
+\textbf{${1:${VISUAL}}}$0
 endsnippet
 snippet ti "italic text" i
-\textit{$1}$0
+\textit{${1:${VISUAL}}}$0
 endsnippet
 snippet tu "underline text" i
-\underline{$1}$0
+\underline{${1:${VISUAL}}}$0
 endsnippet
 snippet tdu "double underline" i
-\underline{\underline{$1}}$0
+\underline{\underline{${1:${VISUAL}}}}$0
+endsnippet
+
+# Tables
+snippet hs "Table Tab" i
+\hspace{${1:3mm}}$0
+endsnippet
+
+# Colors
+snippet clr "Set Color" A
+\color{$1}$0
+endsnippet
+
+snippet tclr "Text Color" A
+\textcolor{$1}{${2:${VISUAL}}}$0
+endsnippet
+
+snippet bclr "Background Color" A
+\colorbox{$1}{${2:${VISUAL}}}$0
 endsnippet

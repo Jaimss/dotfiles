@@ -48,11 +48,6 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "" wrA
 endsnippet
 
 context "math()"
-snippet / "Fraction" iA
-\\frac{${VISUAL}}{$1}$0
-endsnippet
-
-context "math()"
 snippet x "\times" i
 \times 
 endsnippet
@@ -69,7 +64,7 @@ endsnippet
 
 context "math()"
 snippet nt "Normal Text (in math mode)" iA
-\text{$1}$0
+\text{${1:${VISUAL}}}$0
 endsnippet
 
 # Subscripts & Exponents

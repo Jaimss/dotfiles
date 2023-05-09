@@ -17,9 +17,9 @@ let g:python3_host_prog = '/usr/bin/python3'
 " snippets
 let g:UltiSnipsSnippetsDir = "~/.config/vim/ultisnips"
 let g:UltiSnipsSnippetDirectories = ["~/.config/vim/ultisnips"]
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<Tab>"
+let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>"
 
 " latex
 nmap <C-w> :w!<cr> :!pdflatex -shell-escape --output-directory output %<cr>
@@ -142,6 +142,12 @@ let g:ctrlp_show_hidden = 1
 " folding
 set foldlevel=99
 
+" html emmet
+let g:user_emmet_expandabbr_key = '<c-e>'
+
+" ycm
+let g:ycm_key_list_select_completion = ['<Down>']
+
 " plugins
 call plug#begin()
 
@@ -164,6 +170,8 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'lervag/vimtex'
 " snippets
 Plug 'SirVer/ultisnips'
+" HTML Emmet
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
