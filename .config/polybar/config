@@ -9,7 +9,7 @@ alert = #bd574e
 ;;; SECONDARY MONITOR BAR || SECONDARY MONITOR BAR ;;;
 [bar/secondary]
 dpi=220
-monitor = ${env:MONITOR:DP-3}
+monitor = ${env:DUAL_MONITOR_SECONDARY:DP-1-1}
 width = 100%
 height = 75
 fixed-center = true
@@ -46,7 +46,49 @@ cursor-click = pointer
 ;;; MAIN BAR || MAIN BAR ;;;
 [bar/main]
 dpi=220
-monitor = ${env:MONITOR:eDP-1}
+monitor = ${env:DUAL_MONITOR_PRIMARY:DP-1-2}
+width = 100%
+height = 75
+fixed-center = true
+background = ${colors.bg-darker}
+foreground = ${colors.white}
+; border
+line-size = 10
+border-color = #00000000
+border-top-size = 25
+border-bottom-size = 5
+border-left-size = 100
+border-right-size = 100
+radius = 35
+padding-left = 7
+padding-right = 10
+; system tray
+; tray-position = right
+; tray-padding = 3
+; tray-background = ${colors.bg-darker}
+; line-size = 3
+; line-color = #f00
+; fonts
+font-0 = "SFNS Display:style=Bold:size=10;1"
+font-1 = "Font Awesome 6 Free:style=Solid:size=10;1"
+font-2 = "Font Awesome 6 Brands:size=10;1"
+font-3 = "Font Awesome 6 Regular:size=10;1"
+font-4 = "Font Awesome 5 Free:style=Solid:size=10;1"
+font-5 = "Font Awesome 5 Brands:size=10;1"
+font-6 = "Font Awesome 5 Regular:size=10;1"
+; modules
+modules-left = i3
+modules-center = date
+modules-right = wireless wired memory cpu battery
+module-margin = 4
+; behaviors
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+cursor-click = pointer
+
+[bar/laptop]
+dpi=220
+monitor = ${env:DUAL_MONITOR_PRIMARY:eDP-1}
 width = 100%
 height = 75
 fixed-center = true

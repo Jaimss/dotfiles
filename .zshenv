@@ -6,10 +6,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # export SDKMAN_DIR="$XDG_DATA_HOME/sdkman"
 # source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
-# monitors
-export MONITOR_PRIMARY="HDMI-0"
-export MONITOR_SECONDARY="DP-1"
-
 # default programs
 export EDITOR="vim"
 

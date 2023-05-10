@@ -7,6 +7,7 @@ killall -q polybar
 
 polybar main >>/tmp/polybar1.log 2>&1 & disown
 polybar secondary >>/tmp/polybar1.log 2>&1 & disown
+polybar laptop >>/tmp/polybar1.log 2>&1 & disown
 
 # if type "xrandr"; then
     # for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do

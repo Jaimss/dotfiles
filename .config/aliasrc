@@ -1,6 +1,6 @@
 # vim: set ft=bash
 
-alias .="cd .."
+#alias .="cd .."
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
