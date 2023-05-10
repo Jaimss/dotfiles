@@ -169,7 +169,7 @@ exec_always --no-startup-id xset -dpms
 exec_always --no-startup-id . $HOME/.config/scripts/monitor_env_vars.sh
 exec_always --no-startup-id $HOME/.config/i3/setupmonior.sh
 # polybar
-exec_always --no-startup-id .$HOME/.config/scripts/monitor_env_vars.sh && $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # displays & bg
 exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg
 # dunst (notification)
