@@ -1,0 +1,23 @@
+#!/bin/bash
+unset DUAL_MONITOR_PRIMARY
+unset DUAL_MONITOR_SECONDARY
+
+E_LAPTOP="eDP-1"
+E_SECONDARY="DP-3"
+
+E_PRIMARY_DOCK="DP-1-2"
+E_SECONDARY_DOCK="DP-1-1"
+
+CONNECTED=$(xrandr | grep " connected " | awk '{ print$1 }')
+
+if [[ $CONNECTED == *"$E_SECONDARY"* ]]; then
+    export DUAL_MONITOR_PRIMARY=$E_LAPTOP
+    export DUAL_MONITOR_SECONDARY=$E_SECONDARY
+
+elif [[ $CONNECTED == *"$E_PRIMARY_DOCK"* ]] && [[ $CONNECTED == *"$E_SECONDARY_DOCK"* ]]; then
+    export DUAL_MONITOR_PRIMARY=$E_PRIMARY_DOCK
+    export DUAL_MONITOR_SECONDARY=$E_SECONDARY_DOCK
+
+else
+    export DUAL_MONITOR_PRIMARY=$E_LAPTOP
+fi

@@ -1,0 +1,79 @@
+#vim=set ft=cfg
+[global]
+    # Monitor
+    monitor=0
+    follow=mouse
+
+    geometry="0x0-100+50"
+    
+    indicate_hidden=yes
+
+    shrink=no
+
+    transparency=no
+
+    notification_height=0
+
+    padding=20
+    horizontal_padding=20
+
+    frame_width=3
+
+    frame_color="#aaaaaa"
+
+    separator_color = auto
+    separator_height = 2
+
+    sort=yes
+
+    idle_threshold = 120
+
+    font = San Francisco Display 10
+    
+    line_height = 0
+
+    markup=full
+
+    format="<b>%s</b>\n%b"
+    alignment = center
+
+    show_age_threshold=60
+
+    word_wrap=yes
+
+    ellipsize=middle
+
+    ignore_newline=no
+
+    show_indicators=yes
+
+    icon_position=left
+    max_icon_size = 75
+
+    icon_path=$HOME/.config/dunst/
+
+    corner_radius = 10
+
+    mouse_left_click=do_action
+    mouse_middle_click=close_all
+    mouse_right_click=close_current
+
+
+[urgency_low]
+    background="#2b2b2b"
+    foreground="#ffffff"
+    timeout=10
+    icon="/home/james/.config/dunst/normal.svg"
+
+[urgency_normal]
+    background="#2b2b2b"
+    foreground="#ffffff"
+    timeout=10
+    icon="/home/james/.config/dunst/normal.svg"
+
+[urgency_critical]
+    background="#900000"
+    foreground="#ffffff"
+    frame_clor="#ff0000"
+    timeout=20
+    icon="/home/james/.config/dunst/critical.svg"
