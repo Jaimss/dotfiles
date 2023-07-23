@@ -115,3 +115,64 @@ context "math()"
 snippet ua "up arrow" w
 \uparrow
 endsnippet
+
+context "math()"
+snippet () "\left ( \right)" 
+\left ( ${1:${VISUAL}} \right ) $0
+endsnippet
+
+context "math()"
+snippet [] "\left ( \right)" 
+\left [ ${1:${VISUAL}} \right ] $0
+endsnippet
+
+context "math()"
+snippet || "\left ( \right)" 
+\left | ${1:${VISUAL}} \right | $0
+endsnippet
+
+context "math()"
+snippet ) "\right )"
+\right )
+endsnippet
+
+context "math()"
+snippet ( "\left (" 
+\left (
+endsnippet
+
+context "math()"
+snippet ) "\right )"
+\right )
+endsnippet
+
+context "math()"
+snippet [ "\left ]" 
+\left [
+endsnippet
+
+context "math()"
+snippet ] "\right ]"
+\right ]
+endsnippet
+
+context "math()"
+snippet { "\left {" 
+\left {
+endsnippet
+
+context "math()"
+snippet } "\right }"
+\right }
+endsnippet
+
+
+context "math()"
+snippet l| "\left |" 
+\left |
+endsnippet
+
+context "math()"
+snippet r| "\right |"
+\right |
+endsnippet
