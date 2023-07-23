@@ -79,7 +79,7 @@ font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = wireless wired memory cpu battery
+modules-right = pulseaudio wireless wired memory cpu battery
 module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
@@ -299,6 +299,29 @@ label-connected-foreground = ${colors.blue}
 ; Default: (none)
 ; label-disconnected =N/a
 ; label-disconnected-foreground = ${colors.blue}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 1
+format-volume = <ramp-volume>  <label-volume>
+label-muted =  
+label-muted-foreground = ${colors.blue}
+label-volume-foreground = ${colors.blue}
+ramp-volume-foreground = ${colors.blue}
+ramp-volume-0 = 🔈 
+ramp-volume-1 = 🔉 
+ramp-volume-2 = 🔊 
 
 [settings]
 screenchange-reload = true

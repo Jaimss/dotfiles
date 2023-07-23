@@ -88,8 +88,10 @@ bindsym $mod+d exec rofi -show combi -show calc
 bindsym $mod+Shift+x exec i3lock --color "$bg-color"
 # Pulse Audio controls
 bindsym XF86AudioMute exec amixer -D pulse set 'Master' 1+ toggle
-bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
-bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+#bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
+#bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+bindsym XF86AudioLowerVolume exec amixer -D pulse sset 'Master' 5%-
+bindsym XF86AudioRaiseVolume exec amixer -D pulse sset 'Master' 5%+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -161,6 +163,8 @@ exec --no-startup-id alacritty
 exec --no-startup-id google-chrome-stable
 exec --no-startup-id discord
 exec --no-startup-id spotify
+# playerctl uses most recent app for controls
+exec --no-startup-id playerctld daemon
 # displays don't sleep
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
