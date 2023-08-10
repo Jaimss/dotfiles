@@ -24,7 +24,7 @@ border-right-size = 100
 border-bottom-size = 5
 padding-right = 10
 padding-left = 7
-radius = 35
+radius = 24
 ; fonts
 font-0 = "SFNS Display:style=Bold:size=10;1"
 font-1 = "Font Awesome 6 Free:style=Solid:size=10;1"
@@ -59,12 +59,15 @@ border-top-size = 25
 border-bottom-size = 5
 border-left-size = 100
 border-right-size = 100
-radius = 35
+radius = 24
 padding-left = 7
 padding-right = 10
 ; system tray
-; tray-position = right
-; tray-padding = 3
+;tray-detached = true
+;tray-position = right
+;tray-offset-x = -20
+;tray-padding = 2
+;tray-maxsize = 1000
 ; tray-background = ${colors.bg-darker}
 ; line-size = 3
 ; line-color = #f00
@@ -79,7 +82,7 @@ font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio wireless wired memory cpu battery
+modules-right = pulseaudio wireless wired memory cpu battery powermenu
 module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
@@ -121,7 +124,7 @@ font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = wireless wired memory cpu battery
+modules-right = pulseaudio wireless wired memory cpu battery powermenu
 module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
@@ -319,9 +322,19 @@ label-muted = 
 label-muted-foreground = ${colors.blue}
 label-volume-foreground = ${colors.blue}
 ramp-volume-foreground = ${colors.blue}
-ramp-volume-0 = 🔈 
-ramp-volume-1 = 🔉 
-ramp-volume-2 = 🔊 
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+;; Power Menu Module
+[module/powermenu]
+type = custom/text
+
+content = 
+;content-background = black
+content-foreground = ${colors.blue}
+
+click-left = ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 [settings]
 screenchange-reload = true

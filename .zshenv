@@ -36,6 +36,11 @@ export PYLINTHOME="$XDG_CACHE_HOME/pylint"
 export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
+# source setup env variables
+#if [ -f "$HOME/.config/scripts/monitor_env_vars.sh" ]; then
+    #source "$HOME/.config/scripts/monitor_env_vars.sh"
+#fi
+
 # from .profile
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then

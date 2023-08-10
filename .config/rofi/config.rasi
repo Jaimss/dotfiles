@@ -2,6 +2,5 @@ configuration {
     modi: "combi";
     combi-modi: "drun,ssh";
     font: "System San Francisco Display 18";
-    opacity: 85;
 }
 @theme "Arc-Dark"
