@@ -263,9 +263,9 @@ type = internal/network
 interface = wlp0s20f3
 
 interface-type = wireless
-interval = 3.0
-accumulate-stats = true
-unknown-as-up = true
+interval = 1.0
+accumulate-stats = false
+;unknown-as-up = true
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
@@ -285,12 +285,13 @@ label-disconnected-foreground = ${colors.blue}
 
 [module/wired]
 type = internal/network
-interface = enx00e04c680ce2
+;interface = enx00e04c680ce2
+interface = enx5c28862d9275
 
 interface-type = wired
-interval = 3.0
-accumulate-stats = true
-unknown-as-up = true
+interval = 1.0
+accumulate-stats = false
+;unknown-as-up = true
 
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>

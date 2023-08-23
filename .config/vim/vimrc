@@ -21,6 +21,9 @@ let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>"
 
+" makefile
+nmap <C-m> :w!<cr> :!make<cr>
+
 " latex
 " add a debug option for pdflatex
 nmap <C-d> :w!<cr> :!pdflatex -shell-escape --output-directory output %<cr>

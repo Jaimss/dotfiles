@@ -174,7 +174,9 @@ exec_always --no-startup-id xset -dpms
 # compton
 #exec_always --no-startup-id compton --config /home/james/.config/compton.conf
 # setup displays, polybar and background
-exec_always --no-startup-id $HOME/.config/i3/setupmonior.sh; exec_always --no-startup-id $HOME/.config/polybar/launch.sh; exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg;
+exec_always --no-startup-id $HOME/.config/i3/setupmonior.sh 
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
+exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2.jpg;
 #exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/mountains.jpg
 # dunst (notification)
 #exec killall -q notify-osd
