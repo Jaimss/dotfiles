@@ -1088,7 +1088,7 @@
      language="" />
   <group
      id="theme"
-     defaultPreferDarkTheme="0"
+     defaultPreferDarkTheme="1"
      defaultIconTheme="Yaru-blue-dark"
      defaultGtkTheme="Yaru-blue-dark"
      narrowSpinButton="1"

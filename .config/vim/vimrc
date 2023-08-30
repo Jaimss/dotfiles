@@ -22,8 +22,7 @@ let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>"
 
 " makefile
-" default pressing enter does this
-"nmap <C-m> :w!<cr> :!make<cr>
+nmap <C-m> :w!<cr> :!make<cr>
 
 " latex
 " add a debug option for pdflatex
