@@ -327,6 +327,9 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
+click-right = ~/.config/rofi/outputdevice/type-1/launcher.sh
+click-middle = ~/.config/rofi/inputdevice/type-1/launcher.sh
+
 ;; Power Menu Module
 [module/powermenu]
 type = custom/text
