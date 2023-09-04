@@ -567,7 +567,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -972,7 +972,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="fill:#0000ff;stroke:#000000;font-size:14.66666667px">
+     style="fill:#0000ff;stroke:#0000ff;font-size:14.66666667px;stroke-width:1.00157475;stroke-dasharray:1.00157475, 3.00472426">
     <group
        width="640"
        height="480"
