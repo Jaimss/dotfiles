@@ -163,7 +163,7 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="39.4556"
+         rx="149.125"
          ry="7.47966" />
       <eventcontext
          id="star"
@@ -567,7 +567,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
