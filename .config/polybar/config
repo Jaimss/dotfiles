@@ -108,9 +108,9 @@ radius = 35
 padding-left = 7
 padding-right = 10
 ; system tray
-; tray-position = right
-; tray-padding = 3
-; tray-background = ${colors.bg-darker}
+tray-position = right
+tray-padding = 3
+tray-background = ${colors.bg-darker}
 ; line-size = 3
 ; line-color = #f00
 ; fonts

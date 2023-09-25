@@ -6,3 +6,5 @@ Inkscape Dot: Ctrl+Left Click
 
 mod+e: split not stack or tabbed
 
+ctrl + alt + m: mathpix snipper, use esc to exit
+

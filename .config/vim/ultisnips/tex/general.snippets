@@ -126,3 +126,10 @@ endsnippet
 snippet bclr "Background Color" A
 \colorbox{$1}{${2:${VISUAL}}}$0
 endsnippet
+
+snippet grbox "Gray Box"
+\begin{tcolorbox}[breakable, enhanced jigsaw, width=\textwidth,colback={vlightgray}, parbox=false]
+$1
+\end{tcolorbox}
+$0
+endsnippet
