@@ -1,7 +1,8 @@
 # Tables
 snippet table "insert table" bA
 \begin{table}[H]
-	\\begin{tabular}{|${1:c}|}
+	\\centering
+	\\begin{tabular}{${1:c}}
 		\toprule
 		$0
 		\bottomrule
@@ -35,13 +36,13 @@ snippet enumn "enumerate environment (1.)" bA
 \\end{enumerate}
 endsnippet
 snippet enuma "enumerate environment (a)" bA
-\\begin{enumerate}[{$1:(a)}]
+\\begin{enumerate}[label=(\alph*)]
 	\\item $2
 	${0:rit }
 \\end{enumerate}
 endsnippet
 snippet enumi "enumerate environment (i)" bA
-\\begin{enumerate}[{$1:(i)}]
+\\begin{enumerate}[label=(\roman*)]
 	\\item $2
 	${0:rit }
 \\end{enumerate}

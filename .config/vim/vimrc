@@ -7,6 +7,12 @@ set clipboard=unnamedplus
 
 set backspace=indent,eol,start
 
+" move up and down
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
 "fix spelling
 setlocal spell
 set spelllang=en_us

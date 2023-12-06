@@ -20,6 +20,11 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
+# cuda
+export CUDA_HOME=/usr/local/cuda
+export PATH=${CUDA_HOME}/bin:${PATH}
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
+
 # ~/ cleanup
 source "$XDG_CONFIG_HOME/aliasrc"
 

@@ -125,7 +125,7 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="13.301"
+         width="50.2715"
          height="13.4763" />
       <eventcontext
          id="3dbox"
@@ -163,15 +163,16 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="242.4"
+         rx="916.157"
          ry="385.984" />
       <eventcontext
          id="star"
-         magnitude="5"
+         magnitude="6"
          style="fill:yellow;"
          usecurrent="1"
          proportion="0.5"
-         isflatsided="0" />
+         isflatsided="1"
+         rounded="-3.46945e-18" />
       <eventcontext
          id="spiral"
          style="fill:none;stroke:black"
@@ -185,7 +186,7 @@
        style="fill:none;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-linecap:butt;">
       <eventcontext
          id="pencil"
-         tolerance="4.0"
+         tolerance="10"
          selcue="1"
          style="stroke-width:1px;"
          usecurrent="0"
@@ -216,8 +217,8 @@
        usepressure="1"
        usetilt="0"
        keep_selected="1"
-       abs_width="0"
-       unit="px">
+       abs_width="1"
+       unit="mm">
       <group
          id="preset">
         <group
@@ -322,7 +323,7 @@
        id="lpetool"
        mode="drag"
        style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:none;"
-       unit="px"
+       unit="mm"
        show_bbox="1" />
     <eventcontext
        id="text"
@@ -567,7 +568,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="2" />
+       page="1" />
     <group
        id="filtereffects" />
     <group
@@ -606,7 +607,7 @@
        path="">
       <group
          id="exportarea"
-         value="page" />
+         value="custom" />
       <group
          id="defaultxdpi" />
     </group>
@@ -688,7 +689,8 @@
   </group>
   <group
      id="options"
-     rotationlock="1">
+     rotationlock="1"
+     onimport="0">
     <group
        id="renderingcache"
        size="512" />
@@ -975,7 +977,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="fill:#00ff00;font-size:14.66666667px;stroke-width:0.70741647;stroke:#00ff16">
+     style="fill:#00ffff;font-size:14.66666667px;stroke-width:1.0015748;stroke:#000080">
     <group
        width="640"
        height="480"
