@@ -977,7 +977,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="fill:#00ffff;font-size:14.66666667px;stroke-width:1.0015748;stroke:#000080">
+     style="fill:#00ffff;font-size:16px;stroke-width:1.0015748;stroke:#000080">
     <group
        width="640"
        height="480"
