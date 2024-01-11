@@ -12,6 +12,11 @@ def env(name):
 endglobal
 
 context "math()"
+snippet mbb "Math Bold" i
+\mathbb{$1}$0
+endsnippet 
+
+context "math()"
 snippet int "Regular Integral"
 \int_{$1}^{$2} { $3 } \:dx
 endsnippet
@@ -200,3 +205,4 @@ context "math()"
 snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
 \vec{`!p snip.rv=match.group(1)`}
 endsnippet 
+
