@@ -163,8 +163,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="20.3171"
-         ry="20.3171" />
+         rx="4.73882"
+         ry="5.47763" />
       <eventcontext
          id="star"
          magnitude="6"
@@ -977,7 +977,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="font-size:16px;stroke-width:1.0015748;stroke:#008000;fill:#008000">
+     style="font-size:16px;stroke-width:1.0015748;stroke:#008000;fill:#ff0000">
     <group
        width="640"
        height="480"
