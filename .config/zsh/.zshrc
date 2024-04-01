@@ -30,9 +30,11 @@ export KEYTIMEOUT=5
 bindkey -M viins 'jk' vi-cmd-mode
 
 bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
+#bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
+#bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 bindkey -v '^?' backward-delete-char
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -64,10 +66,17 @@ plugins=(
     git 
     python
     vi-mode
+    zsh-history-substring-search
 ) 
 
 
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /home/james/.config/zsh/ohmyzsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# substring history search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
