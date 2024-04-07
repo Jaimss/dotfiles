@@ -22,9 +22,10 @@ snippet int "Regular Integral"
 endsnippet
 
 context "math()"
-snippet iint "Inline integral"
-$\int_{$1}^{$2} { $3 } \:dx$
+snippet lim "Limit"
+\lim{$1 \to $2} $3 \:dx $0
 endsnippet
+
 
 snippet mk "Math Inline" wA
 $${1}$`!p
@@ -52,10 +53,10 @@ snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "" wrA
 \frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
 
-context "math()"
-snippet x "\times" i
-\times 
+snippet ' x' "\times" wr
+ \times
 endsnippet
+
 
 context "math()"
 snippet e "x 10^{..}" i
