@@ -125,9 +125,10 @@ bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 # Screenshots
-bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png # fullscrenn
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png # active window
+#bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png # fullscrenn
+#bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png # active window
 bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png # seleciton
+bindsym $mod+Print exec --no-startup-id maim --select | tee ~/pics/$(date +%m-%d-%y_%H:%M:%S).png | xclip -selection clipboard -t image/png
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
