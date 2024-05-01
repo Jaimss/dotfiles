@@ -23,7 +23,7 @@ endsnippet
 
 context "math()"
 snippet lim "Limit"
-\lim{$1 \to $2} $3 \:dx $0
+\lim_{$1 \to $2} $3 
 endsnippet
 
 
@@ -94,6 +94,11 @@ priority 1000
 context "math()"
 snippet '([A-Za-z0-9]+)_nt' "auto subscript" wrA
 `!p snip.rv = match.group(1)`_\text{$1}$0
+endsnippet
+
+context "math()"
+snippet "tpn" "to the parenthesees n ^{(n)}" riA
+^{(n)}
 endsnippet
 
 #Arrows
