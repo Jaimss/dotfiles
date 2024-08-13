@@ -23,9 +23,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# set up fzf
-source <(fzf --zsh)
-
 # vim mode
 bindkey -v
 export KEYTIMEOUT=5

@@ -20,6 +20,9 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
+# nvim
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 # cuda
 export CUDA_HOME=/usr/local/cuda
 export PATH=${CUDA_HOME}/bin:${PATH}
