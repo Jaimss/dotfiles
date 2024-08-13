@@ -39,6 +39,8 @@ nmap <C-h> :!zathura $(echo output/% \| sed 's/tex$/pdf/') & disown<cr><cr>
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
+let g:vimtex_view_method = 'zathura'
+
 " ~/ cleanup
 set undodir=$XDG_DATA_HOME/vim/undo
 set directory=$XDG_DATA_HOME/vim/swap
@@ -177,17 +179,20 @@ Plug 'https://github.com/tmhedberg/SimpylFold.git'
 Plug 'vim-python/python-syntax'
 Plug 'nvie/vim-flake8'
 " linting
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-" latex
-Plug 'lervag/vimtex'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " snippets
 Plug 'SirVer/ultisnips'
 " HTML Emmet
 Plug 'mattn/emmet-vim'
+" One Dark
+Plug 'https://github.com/joshdick/onedark.vim.git'
+" latex
+Plug 'lervag/vimtex'
 
 call plug#end()
 
 " color scheme
-set termguicolors
-set bg=dark
+"set termguicolors
+"set bg=dark
 
+colorscheme onedark
