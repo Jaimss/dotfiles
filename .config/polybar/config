@@ -82,7 +82,7 @@ font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = pulseaudio wireless wired memory cpu battery powermenu
+modules-right = backlight-laptop pulseaudio wireless wired memory cpu battery powermenu
 module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext
@@ -339,6 +339,34 @@ content = 
 content-foreground = ${colors.blue}
 
 click-left = ~/.config/rofi/powermenu/type-1/powermenu.sh
+
+[module/backlight-laptop]
+type = internal/backlight
+card = intel_backlight
+use-actual-brightness = true
+format-foreground = ${colors.blue}
+; Available tags:
+;   <label> (default)
+;   <ramp>
+;   <bar>
+format = <ramp>
+
+; Available tokens:
+;   %percentage% (default)
+label = %percentage%%
+
+; Only applies if <ramp> is used
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
+
+; Only applies if <bar> is used
+bar-width = 5
+bar-indicator = |
+bar-fill = ─
+bar-empty = ─
 
 [settings]
 screenchange-reload = true
