@@ -105,6 +105,8 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+#
+bindsym XF86Calculator exec google-chrome-stable desmos.com/calculator
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down

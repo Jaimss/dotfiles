@@ -53,6 +53,8 @@ function vpdf {
 }
 alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
 
+alias fman='compgen -c | fzf | xargs man'
+
 # an extract method
 function extract {
  if [ -z "$1" ]; then

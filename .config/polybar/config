@@ -82,7 +82,8 @@ font-6 = "Font Awesome 5 Regular:size=10;1"
 ; modules
 modules-left = i3
 modules-center = date
-modules-right = backlight-laptop pulseaudio wireless wired memory cpu battery powermenu
+; memory cpu
+modules-right = backlight-laptop pulseaudio wireless wired battery powermenu
 module-margin = 4
 ; behaviors
 scroll-up = i3wm-wsnext

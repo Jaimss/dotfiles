@@ -55,4 +55,8 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+
 export GPG_TTY=$(tty)
