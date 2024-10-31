@@ -12,14 +12,39 @@ alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 
 alias cl="clear"
 
-alias ls="ls -hN --color=auto --group-directories-first"
+#alias ls="ls -hN --color=auto --group-directories-first"
 
-alias la="ls -Alh"
+alias la="ls -AlhN --color=auto --group-directories-first"
 
 alias mkd="mkdir -pv"
 alias g="git"
 
 alias cal="calcurse"
+
+new_notes() {
+    folder_name="$1"
+
+    if [[ -z "$folder_name" ]]; then
+    echo "Usage: new_notes <folder_name>"
+    fi
+
+    cp ~/dox/latex-templates/notes "$folder_name" -r
+    mv "$folder_name/notes.tex" "$folder_name/$folder_name.tex"
+}
+
+# move recent files
+mvrecent() {
+  src_folder="$1"
+  dest_folder="$2"
+  n="$3"
+  
+  if [[ -z "$src_folder" || -z "$dest_folder" || -z "$n" ]]; then
+    echo "Usage: mvrecent <source_folder> <destination_folder> <number_of_files>"
+    return 1
+  fi
+
+  ls -t "$src_folder" | head -n "$n" | xargs -I {} mv "$src_folder/{}" "$dest_folder/"
+}
 
 # screenshots
 mvss() {

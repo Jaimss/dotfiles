@@ -125,8 +125,8 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="50.2715"
-         height="13.4763" />
+         width="115.249"
+         height="21.0704" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -568,7 +568,7 @@
        id="toolbox" />
     <group
        id="fillstroke"
-       page="1" />
+       page="2" />
     <group
        id="filtereffects" />
     <group
@@ -977,7 +977,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="font-size:16px;stroke-width:1.0015748;stroke:#008000;fill:#ff0000">
+     style="font-size:16px;stroke-width:1.0015748;stroke:#00ffff;fill:#00ffff">
     <group
        width="640"
        height="480"

@@ -16,10 +16,6 @@ snippet mbb "Math Bold" i
 \mathbb{$1}$0
 endsnippet 
 
-context "math()"
-snippet int "Regular Integral"
-\int_{$1}^{$2} { $3 } \:dx
-endsnippet
 
 context "math()"
 snippet lim "Limit"
@@ -67,6 +63,13 @@ context "math()"
 snippet '([0-9])e' "x 10^{..}" irA
 `!p snip.rv= match.group(1)` \times 10^{$1} $0
 endsnippet
+
+priority 1000
+context "math()"
+snippet int "Regular Integral"
+\int_{$1}^{$2} { $3 } \:dx
+endsnippet
+priority 0
 
 context "math()"
 snippet nt "Normal Text (in math mode)" i
@@ -164,12 +167,12 @@ endsnippet
 
 context "math()"
 snippet { "\left {" 
-\left{
+\left\\{
 endsnippet
 
 context "math()"
 snippet } "\right }"
-\right}
+\right\\}
 endsnippet
 
 
@@ -211,4 +214,33 @@ context "math()"
 snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
 \vec{`!p snip.rv=match.group(1)`}
 endsnippet 
+
+context "math()"
+snippet unbr "Underbrace Multiline"
+\underbrace{${1:${VISUAL}}}_{\substack{\text{$2}}}
+endsnippet
+
+context "math()"
+snippet ovbr "Overbrace Multiline"
+\overbrace{${1:${VISUAL}}}^{\substack{\text{$2}}}
+endsnippet
+
+snippet sympy "sympy block " w
+sympy ${1:${VISUAL}} sympy$0
+endsnippet
+
+priority 10000
+snippet 'sympy (.*) sympy' "evaluate sympy" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
 
