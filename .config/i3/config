@@ -176,6 +176,7 @@ exec --no-startup-id playerctld daemon
 # displays don't sleep
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
+#exec_always --no-startup-id solaar --restart-on-wake-up &
 # compton
 #exec_always --no-startup-id compton --config /home/james/.config/compton.conf
 # setup displays, polybar and background
