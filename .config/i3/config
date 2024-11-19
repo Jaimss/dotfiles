@@ -177,8 +177,6 @@ exec --no-startup-id playerctld daemon
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 #exec_always --no-startup-id solaar --restart-on-wake-up &
-# compton
-#exec_always --no-startup-id compton --config /home/james/.config/compton.conf
 # setup displays, polybar and background
 exec_always --no-startup-id $HOME/.config/i3/setupmonior.sh 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh 
@@ -189,6 +187,9 @@ exec_always --no-startup-id feh --no-fehbg --bg-scale /home/james/.config/i3/bg2
 #exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
 # mouse acceleratio
 exec_always --no-startup-id xinput --set-prop "DELL097D:00 04F3:311C Touchpad" "libinput Accel Speed" .3
+
+# compton
+#exec_always --no-startup-id compton --config /home/james/.config/compton.conf
 
 
 #######################

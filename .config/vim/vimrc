@@ -8,10 +8,27 @@ set clipboard=unnamedplus
 set backspace=indent,eol,start
 
 " move up and down
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
+"nnoremap j gj
+"nnoremap k gk
+"nnoremap gj j
+"nnoremap gk k
+" g(k/g) will move within a wrapped line. if we do a small move, we want to be
+" inside the line. for big moves, do a normal move
+function! SmartMove(key)
+  let count = v:count
+  if count <= 2
+    if a:key ==# 'j'
+      return 'gj'
+    elseif a:key ==# 'k'
+      return 'gk'
+    endif
+  else
+    return a:key
+  endif
+endfunction
+
+nnoremap <expr> j SmartMove('j')
+nnoremap <expr> k SmartMove('k')
 
 "fix spelling
 setlocal spell
