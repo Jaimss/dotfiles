@@ -7,6 +7,9 @@ set clipboard=unnamedplus
 
 set backspace=indent,eol,start
 
+" zt,zb leave some lines visible
+set scrolloff=4
+
 " move up and down
 "nnoremap j gj
 "nnoremap k gk

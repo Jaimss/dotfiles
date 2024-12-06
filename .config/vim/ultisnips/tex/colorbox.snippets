@@ -1,0 +1,28 @@
+snippet cbgray "Gray Box"
+\begin{tcolorbox}[breakable, enhanced jigsaw, width=\textwidth,colback=gray!5!white, parbox=false]
+$0
+\end{tcolorbox}
+endsnippet
+
+snippet cbex "Example"
+\begin{tcolorbox}[breakable, enhanced jigsaw, colback=gray!5!white, parbox=false,title={${1:Example}}
+]
+$0
+\tcblower
+\end{tcolorbox}
+endsnippet
+
+snippet cbexq "Exam Question"
+\begin{tcolorbox}[breakable, enhanced jigsaw, colback=green!5!white, colframe=green!75!black, parbox=false,title={${1:Exam Question}}
+]
+$0
+\tcblower
+\end{tcolorbox}
+endsnippet
+
+snippet cbim "Important Box"
+\begin{tcolorbox}[breakable, enhanced jigsaw, colback=red!5!white, colframe=red!75!black, parbox=false,title={${1:Important}}
+]
+$0
+\end{tcolorbox}
+endsnippet
