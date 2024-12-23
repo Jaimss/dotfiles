@@ -7,7 +7,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # source "$SDKMAN_DIR/bin/sdkman-init.sh"
 
 # default programs
-export EDITOR="vim"
+export EDITOR="nvim"
 
 export PATH="$XDG_CONFIG_HOME/scripts:$PATH"
 export LC_ALL=C
@@ -41,7 +41,6 @@ export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME/java"
 export LESSHISTFILE="-"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
-export VIMINIT="source $XDG_CONFIG_HOME/vim/vimrc"
 export WINEPREFIX="$XDG_DATA_HOME/wineprefixes/default"
 
 # source setup env variables

@@ -41,8 +41,8 @@ inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 let g:python3_host_prog = '/usr/bin/python3'
 
 " snippets
-let g:UltiSnipsSnippetsDir = "~/.config/vim/ultisnips"
-let g:UltiSnipsSnippetDirectories = ["~/.config/vim/ultisnips"]
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/ultisnips"
+let g:UltiSnipsSnippetDirectories = ["~/.config/nvim/ultisnips"]
 let g:UltiSnipsExpandTrigger="<Tab>"
 let g:UltiSnipsJumpForwardTrigger="<Tab>"
 let g:UltiSnipsJumpBackwardTrigger="<Shift-Tab>"
@@ -183,36 +183,37 @@ let g:user_emmet_expandabbr_key = '<c-e>'
 let g:ycm_key_list_select_completion = ['<Down>']
 
 " plugins
-call plug#begin()
+"set rtp +=~/.local/share/nvim/site/autoload
+"call plug#begin()
 
-Plug 'terryma/vim-multiple-cursors'
-Plug 'preservim/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'terryma/vim-multiple-cursors'
+"Plug 'preservim/nerdtree'
+"Plug 'jistr/vim-nerdtree-tabs'
+"Plug 'tpope/vim-surround'
+"Plug 'vim-airline/vim-airline'
+"Plug 'ctrlpvim/ctrlp.vim'
 " git
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 " fold with za
-Plug 'https://github.com/tmhedberg/SimpylFold.git'
+"Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
-Plug 'vim-python/python-syntax'
-Plug 'nvie/vim-flake8'
+"Plug 'vim-python/python-syntax'
+"Plug 'nvie/vim-flake8'
 " linting
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " snippets
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 " HTML Emmet
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 " One Dark
-Plug 'https://github.com/joshdick/onedark.vim.git'
+"Plug 'https://github.com/joshdick/onedark.vim.git'
 " latex
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 
-call plug#end()
+"call plug#end()
 
 " color scheme
 "set termguicolors
 "set bg=dark
 
-colorscheme onedark
+"colorscheme onedark
