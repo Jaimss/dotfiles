@@ -1,3 +1,4 @@
+#echo "~/.zshenv is used"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -10,8 +11,9 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export EDITOR="nvim"
 
 export PATH="$XDG_CONFIG_HOME/scripts:$PATH"
-export LC_ALL=C
-export LC_CTYPE=en_US.UTF-8
+#export LC_ALL=C
+#export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # maven
 export PATH="$XDG_CONFIG_HOME/maven/apache-maven-3.6.3/bin:$PATH"
@@ -23,6 +25,9 @@ export PATH="$PATH:$HOME/.local/bin"
 # nvim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
+# tex
+export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
+
 # cuda
 export CUDA_HOME=/usr/local/cuda
 export PATH=${CUDA_HOME}/bin:${PATH}
@@ -32,7 +37,7 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 source "$XDG_CONFIG_HOME/aliasrc"
 
 export LEIN_HOME="$XDG_DATA_HOME/lein"
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+ZDOTDIR="/home/james/.config/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"

@@ -4,6 +4,8 @@
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
+alias vim="nvim"
+
 alias clip="xclip -sel clip"
 
 alias n="nnn -eH"

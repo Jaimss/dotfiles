@@ -183,12 +183,13 @@ let g:user_emmet_expandabbr_key = '<c-e>'
 let g:ycm_key_list_select_completion = ['<Down>']
 
 " plugins
-"set rtp +=~/.local/share/nvim/site/autoload
-"call plug#begin()
+set runtimepath+=~/.local/share/nvim/site/autoload
+source ~/.local/share/nvim/site/autoload/plug.vim
+call plug#begin("~/.local/share/nvim/site/autoload")
 
 "Plug 'terryma/vim-multiple-cursors'
-"Plug 'preservim/nerdtree'
-"Plug 'jistr/vim-nerdtree-tabs'
+Plug 'preservim/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 "Plug 'tpope/vim-surround'
 "Plug 'vim-airline/vim-airline'
 "Plug 'ctrlpvim/ctrlp.vim'
@@ -197,23 +198,23 @@ let g:ycm_key_list_select_completion = ['<Down>']
 " fold with za
 "Plug 'https://github.com/tmhedberg/SimpylFold.git'
 " python plugins
-"Plug 'vim-python/python-syntax'
-"Plug 'nvie/vim-flake8'
+Plug 'vim-python/python-syntax'
+Plug 'nvie/vim-flake8'
 " linting
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 " snippets
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " HTML Emmet
-"Plug 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " One Dark
-"Plug 'https://github.com/joshdick/onedark.vim.git'
+Plug 'https://github.com/joshdick/onedark.vim.git'
 " latex
-"Plug 'lervag/vimtex'
+Plug 'lervag/vimtex'
 
-"call plug#end()
+call plug#end()
 
 " color scheme
-"set termguicolors
-"set bg=dark
+set termguicolors
+set bg=dark
 
-"colorscheme onedark
+colorscheme onedark
