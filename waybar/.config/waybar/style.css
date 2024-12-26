@@ -68,6 +68,7 @@ button:hover {
 #tray,
 #network,
 #mode,
+#custom-notification,
 #scratchpad {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -78,6 +79,11 @@ button:hover {
 }
 
 #clock {
+    color: @maroon;
+    border-bottom: 2px solid @maroon;
+}
+
+#custom-notification {
     color: @maroon;
     border-bottom: 2px solid @maroon;
 }
