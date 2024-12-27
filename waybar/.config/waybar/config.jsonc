@@ -53,7 +53,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "flatpak run com.saivert.pwvucontrol"
     },
     "pulseaudio/slider": {
         "min": 0,
