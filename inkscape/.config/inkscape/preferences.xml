@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <inkscape
-   version="1"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+   version="1">
   <group
      id="window">
     <group
@@ -101,9 +100,10 @@
   </group>
   <group
      id="template">
-    <sodipodi:namedview
+    <group
        id="base"
        pagecolor="#ffffff"
+       deskcolor="#d1d1d1"
        pageopacity="0.0"
        pagecheckerboard="0"
        bordercolor="#666666"
@@ -332,8 +332,12 @@
        font_sample="AaBbCcIiPpQq12369$€¢?.;/()"
        show_sample_in_list="1"
        use_svg2="1"
-       style="line-height:1.25;font-family:sans-serif;font-size:8px"
-       selcue="1" />
+       style="line-height:1.25;font-family:sans-serif;font-size:8px;text-orientation:auto"
+       selcue="1"
+       align_mode="0"
+       writing_mode="0"
+       orientation_mode="0"
+       direction_mode="0" />
     <eventcontext
        id="nodes"
        selcue="1"
@@ -349,10 +353,10 @@
        live_outline="1"
        live_objects="1"
        show_helperpath="0"
-       x="204.236"
-       y="198.03"
        edit_clipping_paths="0"
-       edit_masks="0" />
+       edit_masks="0"
+       x="204.236"
+       y="198.03" />
     <eventcontext
        id="tweak"
        selcue="0"
@@ -370,6 +374,10 @@
        doo="1"
        mode="0" />
     <eventcontext
+       id="marker"
+       selcue="1"
+       gradientdrag="1" />
+    <eventcontext
        id="spray"
        selcue="1"
        gradientdrag="0"
@@ -383,7 +391,9 @@
        mean="0" />
     <eventcontext
        id="gradient"
-       selcue="1" />
+       selcue="1"
+       newgradient="1"
+       newfillorstroke="1" />
     <eventcontext
        id="mesh"
        selcue="1" />
@@ -398,22 +408,20 @@
        pick="1"
        setalpha="1" />
     <eventcontext
-       id="select"
-       selcue="1"
-       gradientdrag="0" />
-    <eventcontext
        id="connector"
        style="fill:none;fill-rule:evenodd;stroke:black;stroke-opacity:1;stroke-linejoin:miter;stroke-width:1px;stroke-linecap:butt;"
        selcue="1"
        curvature="0" />
     <eventcontext
+       id="select"
+       selcue="1"
+       gradientdrag="0"
+       changelayer="1"
+       changepage="1" />
+    <eventcontext
        id="paintbucket"
        style="fill:#a0a0a0;stroke:none;"
        usecurrent="1" />
-    <eventcontext
-       id="marker"
-       selcue="1"
-       gradientdrag="1" />
     <group
        id="geometric"
        mode="drag" />
@@ -550,7 +558,29 @@
   <group
      id="colorselector"
      page="4"
-     switcher="1" />
+     switcher="1">
+    <group
+       id="RGB"
+       visible="1" />
+    <group
+       id="HSL"
+       visible="1" />
+    <group
+       id="CMYK"
+       visible="1" />
+    <group
+       id="HSV"
+       visible="1" />
+    <group
+       id="HSLuv"
+       visible="1" />
+    <group
+       id="OKLAB"
+       visible="1" />
+    <group
+       id="CMS"
+       visible="1" />
+  </group>
   <group
      id="embedded">
     <group
@@ -560,7 +590,17 @@
        panel_ratio="100"
        panel_wrap="0"
        palette="Inkscape default"
-       panel_border="0" />
+       panel_border="0">
+      <group
+         id="pinned"
+         none="1"
+         rgb000000="1"
+         black="1"
+         rgb808080="1"
+         gray-50="1"
+         rgbffffff="1"
+         white="1" />
+    </group>
   </group>
   <group
      id="dialogs">
@@ -655,7 +695,8 @@
     <group
        id="messages" />
     <group
-       id="swatches" />
+       id="swatches"
+       palette="Auto" />
     <group
        id="iconpreview" />
     <group
@@ -743,8 +784,8 @@
        gamutcolor="#808080"
        gamutwarn="0"
        bpc="0"
-       preserveblack="0"
-       uri="" />
+       uri=""
+       preserveblack="0" />
     <group
        id="savewindowgeometry"
        value="1" />
@@ -935,13 +976,13 @@
        no_emphasize_when_zoomedout="0">
       <group
          id="xy"
-         units="px"
          origin_x="0.0"
          origin_y="0.0"
          spacing_x="1.0"
          spacing_y="1.0"
          empspacing="5"
-         dotted="0" />
+         dotted="0"
+         units="px" />
       <group
          id="axonom"
          units="mm"
@@ -951,11 +992,22 @@
          angle_x="30.0"
          angle_z="30.0"
          empspacing="5" />
+      <group
+         id="modular"
+         units="mm"
+         origin_x="0.0"
+         origin_y="0.0"
+         spacing_x="40.0"
+         spacing_y="40.0"
+         gapx="10"
+         gapy="10"
+         marginx="0"
+         marginy="0" />
     </group>
     <group
        id="workarounds"
-       colorsontop="0"
-       partialdynamic="0" />
+       partialdynamic="0"
+       colorsontop="0" />
     <group
        id="rendering" />
     <group
@@ -963,12 +1015,50 @@
        unitType="2" />
     <group
        id="boot"
-       theme="classic">
+       theme="system"
+       enabled="0">
       <group
          id="shown"
          ver1.1.2="1"
-         ver1.2.2="1" />
+         ver1.2.2="1"
+         ver1.4="1" />
     </group>
+    <group
+       id="threading" />
+    <group
+       id="ruler" />
+    <group
+       id="snapping"
+       snap-bbox="1"
+       snap-bbox-edge="1"
+       snap-bbox-corner="1"
+       snap-bbox-edge-midpoint="0"
+       snap-bbox-center="0"
+       simple-snap-bbox="1"
+       snap-node-category="1"
+       snap-path="1"
+       snap-path-intersection="0"
+       snap-node-cusp="1"
+       snap-node-smooth="1"
+       snap-line-midpoint="1"
+       snap-line-tangential="0"
+       snap-line-perpendicular="0"
+       simple-snap-nodes="1"
+       snap-alignment="0"
+       snap-alignment-self="0"
+       snap-distribution="0"
+       simple-snap-alignment="0"
+       snap-others="1"
+       snap-object-midpoint="0"
+       snap-rotation-center="0"
+       snap-text-baseline="1"
+       snap-path-mask="1"
+       snap-path-clip="1"
+       snap-page-border="1"
+       snap-page-margin="1"
+       snap-grid="1"
+       snap-grid-line="1"
+       snap-guide="1" />
   </group>
   <group
      id="extensions"
@@ -977,10 +1067,10 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="font-size:16px;stroke-width:1.0015748;stroke:#00ffff;fill:#00ffff">
+     style="font-size:16px;stroke-width:1.0015748;stroke:#00ffff;fill:#00ffff;text-orientation:auto">
     <group
-       width="640"
-       height="480"
+       width="1320"
+       height="1132"
        x="0"
        y="0"
        maximized="1"
@@ -1005,12 +1095,12 @@
      id="toolbox"
      icononly="1"
      secondary="3"
-     small="3"
-     simplesnap="1">
+     simplesnap="1"
+     small="3">
     <group
        id="tools"
        icononly="1"
-       small="3"
+       small="0"
        iconsize="16"
        width="32">
       <group
@@ -1019,6 +1109,17 @@
     <group
        id="controlbars"
        iconsize="16" />
+  </group>
+  <group
+     id="statusbar">
+    <group
+       id="visibility" />
+  </group>
+  <group
+     id="debug">
+    <group
+       id="latency"
+       skew="1" />
   </group>
   <group
      id="iconpreview"
@@ -1083,30 +1184,20 @@
     </group>
   </group>
   <group
-     id="debug">
-    <group
-       id="latency"
-       skew="1" />
-  </group>
-  <group
-     id="ui"
-     language="" />
-  <group
      id="theme"
-     defaultPreferDarkTheme="1"
-     defaultIconTheme="Yaru-blue-dark"
-     defaultGtkTheme="Yaru-blue-dark"
+     defaultPreferDarkTheme="0"
+     defaultIconTheme="Adwaita"
+     defaultGtkTheme="catppuccin-mocha-blue-standard+default"
      narrowSpinButton="1"
      preferDarkTheme="1"
      darkTheme="1"
-     symbolicIcons="1"
+     symbolicIcons="0"
      symbolicDefaultBaseColors="1"
      symbolicDefaultHighColors="1"
      menuIcons_canvas="0"
      menuIcons_layers="0"
      menuIcons_objects="0"
-     gtkTheme="Adwaita-dark"
-     iconTheme="multicolor">
+     syntax-color-theme="inkscape-dark">
     <group
        id="multicolor"
        symbolicBaseColor="3958107135"
@@ -1115,10 +1206,8 @@
        symbolicErrorColor="10086143" />
   </group>
   <group
-     id="statusbar">
-    <group
-       id="visibility" />
-  </group>
+     id="ui"
+     language="" />
   <group
      id="live_effects"
      flattening="0">
