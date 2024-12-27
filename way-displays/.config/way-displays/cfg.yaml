@@ -15,11 +15,18 @@ ALIGN: MIDDLE
 # The default ORDER is simply the order in which the displays are discovered.
 # Define your own.
 ORDER:
-  - 'DP-6'
-  - 'DP-5'
+  # left monitor (top of dock)
+  - 'HP Inc. HP 25x CNK8322KFG'
+  # right monitor (bottom of dock)
+  - 'HP Inc. HP 25x CNK8291TRY'
+  # 8 (left) and 7 (right)
+  #- 'DP-8'
+  #- 'DP-7'
+  # 6 (left) and 5 (right)
+  #- 'DP-6'
+  #- 'DP-5'
+  # laptop is always fixed on one side depending on home or school
   - 'eDP-1'
-  #- 'monitor description'
-  #- 'HDMI-1'
 
 
 # Enable scaling, overrides AUTO_SCALE and SCALE

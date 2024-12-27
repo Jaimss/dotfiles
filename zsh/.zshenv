@@ -62,5 +62,4 @@ fi
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-
 export GPG_TTY=$(tty)
