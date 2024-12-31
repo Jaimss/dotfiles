@@ -22,6 +22,9 @@ export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
 export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="$PATH:$HOME/.local/bin"
 
+# rust cargo
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+
 # nvim
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
@@ -32,6 +35,9 @@ export PATH="$PATH:/usr/local/texlive/2024/bin/x86_64-linux"
 export CUDA_HOME=/usr/local/cuda
 export PATH=${CUDA_HOME}/bin:${PATH}
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
+
+# jetbrains toolbox
+export PATH="$PATH:/home/james/.local/share/JetBrains/Toolbox/scripts"
 
 # ~/ cleanup
 source "$XDG_CONFIG_HOME/aliasrc"

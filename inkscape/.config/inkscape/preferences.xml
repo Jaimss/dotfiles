@@ -163,8 +163,8 @@
          end="0"
          start="0"
          usecurrent="1"
-         rx="4.73882"
-         ry="5.47763" />
+         rx="174.796243502399"
+         ry="114.710032545675" />
       <eventcontext
          id="star"
          magnitude="6"
@@ -635,7 +635,7 @@
     <group
        id="preferences"
        state="1"
-       page="24" />
+       page="30" />
     <group
        id="gradienteditor" />
     <group
@@ -1069,8 +1069,8 @@
      id="desktop"
      style="font-size:16px;stroke-width:1.0015748;stroke:#00ffff;fill:#00ffff;text-orientation:auto">
     <group
-       width="1320"
-       height="1132"
+       width="1728"
+       height="1080"
        x="0"
        y="0"
        maximized="1"
