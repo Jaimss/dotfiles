@@ -1,7 +1,6 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-format = """
-[](surface0)\
+format = """[](surface0)\
 $os\
 $username\
 [](bg:peach fg:surface0)\
@@ -18,12 +17,15 @@ $php\
 $java\
 $kotlin\
 $haskell\
+$conda\
 $python\
 [](fg:teal bg:blue)\
 $docker_context\
 [](fg:blue bg:purple)\
 $time\
 [ ](fg:purple)\
+$fill\
+$cmd_duration$jobs\
 $line_break$character"""
 
 palette = 'catppuccin_mocha'
@@ -92,6 +94,9 @@ CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+
+[fill]
+symbol = " "
 
 [username]
 show_always = true
@@ -166,6 +171,11 @@ symbol = ""
 style = "bg:teal"
 format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 
+[conda]
+symbol = ""
+style = "bg:teal"
+format = '[[ $symbol( $environment) ](fg:base bg:teal)]($style)'
+
 [docker_context]
 symbol = ""
 style = "bg:mantle"
@@ -180,6 +190,13 @@ format = '[[  $time ](fg:mantle bg:purple)]($style)'
 
 [line_break]
 disabled = false
+
+[cmd_duration]
+disabled=false
+show_milliseconds=false
+
+[jobs]
+format='[$symbol $number]($style) '
 
 [character]
 disabled = false

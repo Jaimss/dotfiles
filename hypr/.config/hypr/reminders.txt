@@ -1,0 +1,12 @@
+Network Manager: nmtui
+Audio In/Out: pwvucontrol
+Vim Figures: inkscape-figures watch
+Inkscape Resize: Ctrl+Shift+R
+Inkscape Doc Properties: Ctrl+Shift+D
+Inkscape Dot: Ctrl+Left Click
+
+mod+U: Copy color to clipboard
+
+ZIPs:
+Extract: 7z x -o<outputdir> <archive>.zip
+Zip: 7z a <archive>.zip <file1> <file2> ...

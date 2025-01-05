@@ -4,6 +4,9 @@
 alias ..="cd ../.."
 alias ...="cd ../../.."
 
+# alias kitty ssh to pass terminal info
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 alias vim="nvim"
 
 alias clip="xclip -sel clip"
@@ -114,3 +117,6 @@ function extract {
     fi
 fi
 }
+
+# pastebin
+alias topaste='curl -s -X POST --data-binary @- https://paste.jaims.dev/documents | jq -r ".key" | xargs -I{} sh -c "echo https://paste.jaims.dev/{} | tee /dev/tty | wl-copy"'
