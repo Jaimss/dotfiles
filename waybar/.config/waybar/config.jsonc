@@ -22,6 +22,10 @@
         "icon-size": 15,
         "spacing": 10
     },
+    "upower": {
+        "format": " {percentage}",
+        "tooltip-format": "  {time}"
+    },
     "battery": {
         "states": {
             "warning": 30,
@@ -35,7 +39,9 @@
         "format-alt": "<span size='13000' foreground='#B1E3AD'>{icon} </span> {time}",
         "format-full": "<span size='13000' foreground='#B1E3AD'> </span>{capacity}%",
         "format-icons": ["", "", "", "", ""],
-        "tooltip-format": "{time}"
+        "format-plugged-icons": ["a", "b"],
+        "tooltip-format": "{timeTo}\nBattery Health: {health}",
+        "tooltip": true
     },
     "network": {
         "interval": 3,

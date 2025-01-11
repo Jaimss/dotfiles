@@ -1,5 +1,7 @@
 Network Manager: nmtui
+Bluetooth Manager: bluetui
 Audio In/Out: pwvucontrol
+
 Vim Figures: inkscape-figures watch
 Inkscape Resize: Ctrl+Shift+R
 Inkscape Doc Properties: Ctrl+Shift+D

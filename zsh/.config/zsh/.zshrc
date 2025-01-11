@@ -5,6 +5,10 @@ export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
 # ignore permissions things for root user
 ZSH_DISABLE_COMPFIX=true
 
+# https://github.com/zsh-users/zsh-completions/tree/master
+# git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+#fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+# yay -S zsh-completions-git
 source $ZSH/oh-my-zsh.sh
 
 # Basic auto/tab complete:
@@ -93,5 +97,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 
 eval "$(starship init zsh)"
