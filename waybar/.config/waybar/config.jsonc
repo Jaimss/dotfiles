@@ -1,10 +1,10 @@
 {
     "position": "top",
-    "modules-left": ["hyprland/workspaces"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["custom/kernel", "backlight", "memory", "cpu", "network", "pulseaudio", "upower", "custom/notification", "tray"],
     "clock": {
-        "format": "<span foreground='#f9e2af'> </span>{:%a %d %I:%M %p}",
+        "format": "<span foreground='#f9e2af'> </span>{:%a %b %d, %Y %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
@@ -88,5 +88,11 @@
     },
     "custom/kernel": {
         "exec": "uname -r"
+    },
+    "hyprland/window": {
+        "icon": false
+    },
+    "custom/arch": {
+        "exec": "echo "
     }
 }   

@@ -71,6 +71,7 @@ button:hover {
 #mode,
 #custom-notification,
 #custom-kernel,
+#custom-arch,
 #scratchpad {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -196,4 +197,8 @@ button:hover {
     border-radius: 15px;
     padding-left: 6px;
     padding-right: 6px;
+}
+#custom-arch {
+    color: #1793D1;
+    font-size: 1.3em;
 }
