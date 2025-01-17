@@ -99,6 +99,8 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # Set up fzf key bindings and fuzzy completion
+source /home/james/.config/zsh/fzf-tab-completion/zsh/fzf-zsh-completion.sh
+bindkey '^I' fzf_completion
 source <(fzf --zsh)
 
 

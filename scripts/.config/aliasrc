@@ -120,3 +120,5 @@ fi
 
 # pastebin
 alias topaste='curl -s -X POST --data-binary @- https://paste.jaims.dev/documents | jq -r ".key" | xargs -I{} sh -c "echo https://paste.jaims.dev/{} | tee /dev/tty | wl-copy"'
+
+alias to0x0='curl -F "file=@-" 0x0.st'

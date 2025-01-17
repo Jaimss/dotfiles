@@ -2,13 +2,13 @@
     "position": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["backlight", "memory", "cpu", "network", "pulseaudio", "upower", "custom/notification", "tray"],
+    "modules-right": ["custom/kernel", "backlight", "memory", "cpu", "network", "pulseaudio", "upower", "custom/notification", "tray"],
     "clock": {
-        "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %I:%M %p}",
+        "format": "<span foreground='#f9e2af'> </span>{:%a %d %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
-        "format": "   {usage}%"
+        "format": " {usage}%"
     },
     "backlight": {
         "format": "{icon} ",
@@ -16,14 +16,14 @@
         "format-icons": ["󰃞", "󰃝", "󰃟", "󰃠"]
     },
     "memory": {
-        "format": "   {percentage}%"
+        "format": " {percentage}%"
     },
     "tray": {
         "icon-size": 15,
         "spacing": 10
     },
     "upower": {
-        "format": " {percentage}",
+        "format": "{percentage}",
         "tooltip-format": "  {time}"
     },
     "battery": {
@@ -45,17 +45,17 @@
     },
     "network": {
         "interval": 3,
-        "format-wifi": "<span size='13000' foreground='#f5e0dc'>{icon} </span>{essid}",
-        "format-ethernet": "<span size='13000' foreground='#f5e0dc'> </span> Ethernet",
+        "format-wifi": "<span size='13000' foreground='#f38ba8'>{icon}</span> {essid}",
+        "format-ethernet": "<span size='13000' foreground='#f38ba8'> </span> Ethernet",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+        "format-disconnected": "<span size='13000' foreground='#f38ba8'> </span>Disconnected",
         "tooltip-format-wifi": "{ifname}\n  {bandwidthUpBytes}\n  {bandwidthDownBytes}\n󱛆  {signalStrength}%",
         "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip-format": "{ifname}\n  {bandwidthUpBytes}\n  {bandwidthDownBytes}"
     },
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "",
+        "format": "{icon} {volume}%",
+        "format-muted": " ",
         "format-icons": {
             "default": ["", "", " "]
         },
@@ -85,5 +85,8 @@
         "on-click": "swaync-client -t -sw",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+    "custom/kernel": {
+        "exec": "uname -r"
     }
 }   

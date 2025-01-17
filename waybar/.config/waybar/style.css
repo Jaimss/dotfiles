@@ -1,7 +1,8 @@
 @import "mocha.css"; 
 
 * {
-    font-family: "MesloLGS Nerd Font Mono Bold";
+    /*font-family: "MesloLGS Nerd Font Mono Bold";*/
+    font-family: "CaskaydiaCove Nerd Font";
     font-size: 16px;
     min-height: 0;
     font-weight: bold;
@@ -69,6 +70,7 @@ button:hover {
 #network,
 #mode,
 #custom-notification,
+#custom-kernel,
 #scratchpad {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -79,28 +81,33 @@ button:hover {
 }
 
 #clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
 }
 
 #custom-notification {
+    color: @teal;
+    border-bottom: 2px solid @teal;
+}
+
+#custom-kernel {
+    color: @rosewater;
+    border-bottom: 2px solid @rosewater;
+}
+
+#clock.date {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#pulseaudio {
     color: @maroon;
     border-bottom: 2px solid @maroon;
 }
 
-#clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
-}
-
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
-}
-
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+    color: @red;
+    border-bottom: 2px solid @red;
 }
 
 #idle_inhibitor {
@@ -118,8 +125,8 @@ button:hover {
 }
 
 #backlight {
-    color: @lavender;
-    border-bottom: 2px solid @lavender;
+    color: @flamingo;
+    border-bottom: 2px solid @flamingo;
 }
 
 #upower {
@@ -138,13 +145,13 @@ button:hover {
 }
 
 #memory {
-    color: @sky;
-    border-bottom: 2px solid @sky;
+    color: @pink;
+    border-bottom: 2px solid @pink;
 }
 
 #cpu {
-    color: @teal;
-    border-bottom: 2px solid @teal;
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
 }
 
 #pulseaudio-slider {

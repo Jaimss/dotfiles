@@ -16,9 +16,10 @@ ALIGN: MIDDLE
 # Define your own.
 ORDER:
   # left monitor (top of dock)
-  - 'HP Inc. HP 25x CNK8322KFG'
+  #- 'HP Inc. HP 25x CNK8322KFG'
   # right monitor (bottom of dock)
   - 'HP Inc. HP 25x CNK8291TRY'
+  - 'HP Inc. HP 25x CNK8322KFG'
   # 8 (left) and 7 (right)
   #- 'DP-8'
   #- 'DP-7'
