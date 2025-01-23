@@ -15,9 +15,10 @@ ALIGN: MIDDLE
 # The default ORDER is simply the order in which the displays are discovered.
 # Define your own.
 ORDER:
-  - 'eDP-1'
-  - 'HP Inc. HP 25x CNK8322KFG'
   - 'HP Inc. HP 25x CNK8291TRY'
+  - 'HP Inc. HP 25x CNK8322KFG'
+  # laptop is always fixed on one side depending on home or school
+  - 'eDP-1'
 
 
 

@@ -81,7 +81,9 @@ export NVM_DIR="$HOME/.config/nvm"
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # 1password
-eval "$(op completion zsh)"; compdef _op op
+if command -v op; then
+    eval "$(op completion zsh)"; compdef _op op
+fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
