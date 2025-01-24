@@ -3,3 +3,6 @@
 *.zcompdump*
 zsh/.config/zsh/.zsh_history
 uwsm/.config/uwsm/default-id
+
+zsh/.config/zsh/ohmyzsh
+zsh/.config/zsh/fzf-tab-completion
