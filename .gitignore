@@ -1,7 +1,9 @@
 .vscode
 .config/vim/plugged
 *.zcompdump*
+
 zsh/.config/zsh/.zsh_history
+
 uwsm/.config/uwsm/default-id
 
 zsh/.config/zsh/ohmyzsh
