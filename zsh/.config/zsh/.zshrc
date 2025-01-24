@@ -81,7 +81,7 @@ export NVM_DIR="$HOME/.config/nvm"
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # 1password
-if command -v op; then
+if command -v op > /dev/null 2>&1; then
     eval "$(op completion zsh)"; compdef _op op
 fi
 
