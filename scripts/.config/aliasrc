@@ -70,6 +70,26 @@ mvss() {
     fi
 }
 
+# downloads
+mvdl() {
+    local screenshot_dir="/home/james/dl"  # Modify this to the path of your screenshots folder
+    local destination_dir="$1"                  # Takes the first argument as the destination directory
+
+    if [ -z "$destination_dir" ]; then
+        echo "Please specify a destination directory."
+        return 1  # Exit the function with an error status if no destination is provided
+    fi
+
+    local latest_file=$(ls -t "$screenshot_dir"/*.png | head -n 1)
+    if [ -n "$latest_file" ]; then
+        mv "$latest_file" "$destination_dir"
+        echo "Moved $latest_file to $destination_dir"
+    else
+        echo "No files found in $screenshot_dir"
+    fi
+}
+
+
 # ranger 
 alias rg='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
