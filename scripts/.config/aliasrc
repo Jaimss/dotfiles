@@ -80,7 +80,7 @@ mvdl() {
         return 1  # Exit the function with an error status if no destination is provided
     fi
 
-    local latest_file=$(ls -t "$screenshot_dir"/*.png | head -n 1)
+    local latest_file=$(ls -t "$screenshot_dir"/* | head -n 1)
     if [ -n "$latest_file" ]; then
         mv "$latest_file" "$destination_dir"
         echo "Moved $latest_file to $destination_dir"

@@ -59,7 +59,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "flatpak run com.saivert.pwvucontrol"
+        "on-click": "pwvucontrol"
     },
     "pulseaudio/slider": {
         "min": 0,
