@@ -32,7 +32,7 @@ button {
 button:hover {
     background: inherit;
     color: @mauve;
-    border-top: 2px solid @mauve;
+    border-bottom: 2px solid @mauve;
 }
 
 #workspaces button {
