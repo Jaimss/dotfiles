@@ -101,8 +101,7 @@ function vpdf {
     fi
     zathura $1/output/*.pdf &
 }
-#alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
-alias snotes='git fetch && git diff --quiet origin/$(git rev-parse --abbrev-ref HEAD) && git ac -m "Saved Class Notes $(date)" && git push || echo "There are changes on the remote, aborting commit and push."'
+alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
 
 alias fman='compgen -c | fzf | xargs man'
 
