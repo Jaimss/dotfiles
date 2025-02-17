@@ -125,8 +125,9 @@
          id="rect"
          style="fill:blue;"
          usecurrent="1"
-         width="115.249"
-         height="21.0704" />
+         width="69.3903981606791"
+         height="38.2150052288391"
+         ry="14.9332584170847" />
       <eventcontext
          id="3dbox"
          style="stroke:none;stroke-linejoin:round;"
@@ -193,7 +194,7 @@
          average_all_sketches="1"
          pressure="0"
          freehand-mode="0"
-         simplify="0"
+         simplify="1"
          shape="0" />
       <eventcontext
          id="pen"
@@ -1071,7 +1072,7 @@
      org.inkscape.output.png.inkscape.png_antialias="2" />
   <group
      id="desktop"
-     style="font-size:16px;stroke-width:1.0015748;stroke:#0000ff;fill:none;text-orientation:auto">
+     style="font-size:16px;stroke-width:1.0015748;stroke:#1a1a1a;fill:#ffffff;text-orientation:auto">
     <group
        width="1728"
        height="972"
