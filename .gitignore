@@ -10,3 +10,5 @@ zsh/.config/zsh/ohmyzsh
 zsh/.config/zsh/fzf-tab-completion
 
 nvim/.config/nvim/spell
+
+__pycache__
