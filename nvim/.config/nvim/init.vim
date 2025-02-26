@@ -190,7 +190,7 @@ call plug#begin("~/.local/share/nvim/site/autoload")
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-"Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 "Plug 'vim-airline/vim-airline'
 "Plug 'ctrlpvim/ctrlp.vim'
 " git
