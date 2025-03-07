@@ -17,8 +17,8 @@ alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 
 alias cl="clear"
 
-#alias ls="ls -hN --color=auto --group-directories-first"
-
+alias ls="ls -hN --color=auto --group-directories-first"
+alias l="ls"
 alias la="ls -AlhN --color=auto --group-directories-first"
 
 alias mkd="mkdir -pv"
