@@ -37,6 +37,10 @@ nnoremap <expr> k SmartMove('k')
 setlocal spell
 set spelllang=en_us
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
+"ls -l ~/.local/share/nvim/site/spell/en.utf-8.add
+"touch ~/.local/share/nvim/site/spell/en.utf-8.add
+"chmod 600 ~/.local/share/nvim/site/spell/en.utf-8.add
+set spellfile=~/.local/share/nvim/site/spell/en.utf-8.add
 
 let g:python3_host_prog = '/usr/bin/python3'
 
