@@ -19,6 +19,12 @@
     coloring = highlightRecent
     date = relative
 
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = -taggerdate
+
 [diff]
     context = 3  # less context in diffs
     renames = copies  # detect copies as renames in diffs
