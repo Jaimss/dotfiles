@@ -27,6 +27,7 @@
     sort = -committerdate
 
 [tag]
+    gpgsign = true
     sort = -taggerdate
 
 [diff]
