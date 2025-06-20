@@ -1,0 +1,88 @@
+[init]
+	defaultBranch = master
+
+[user]
+	email = james@harrell365.com
+	name = James Harrell
+
+[alias]
+	ac = !git add -A && git commit
+
+[commit]
+	gpgsign = true
+    verbose = true
+    template = ~/.config/git/template
+
+[advice]  # disable advices
+    addEmptyPathspec = false
+    pushNonFastForward = false
+    statusHints = false
+
+[blame]
+    coloring = highlightRecent
+    date = relative
+
+[diff]
+    context = 3  # less context in diffs
+    renames = copies  # detect copies as renames in diffs
+    interHunkContext = 10  # merge near hunks in diffs
+
+
+[log]
+    abbrevCommit = true  # short commits
+    graphColors = blue,yellow,cyan,magenta,green,red
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all  # show individual untracked files
+
+[pager]
+    branch = false  # no need to use pager for git branch
+    tag = false
+    diff = diff-so-fancy | $PAGER  # diff-so-fancy as diff pager
+
+[push]
+    autoSetupRemote = true  # easier to push new branches
+    default = current  # push only current branch by default
+    followTags = true  # push also tags
+#
+# Colors
+[color "blame"]
+    highlightRecent = black bold,1 year ago,white,1 month ago,default,7 days ago,blue
+
+[color "branch"]
+    current  = magenta
+    local    = default
+    remote   = yellow
+    upstream = green
+    plain    = blue
+
+[color "diff"]
+    meta       = black bold
+    frag       = magenta
+    context    = white
+    whitespace = yellow reverse
+    old        = red
+
+[color.decorate]
+    HEAD = red
+    branch = blue
+    tag = yellow
+    remoteBranch = magenta
+
+[interactive]
+    diffFilter = diff-so-fancy --patch
+    singlekey = true
+
+# Third-party: diff-so-fancy
+[diff-so-fancy]
+    markEmptyLines = false
+
+
+# URL shortcuts
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[url "git@github.com:Jaimss/"]
+    insteadOf = "ja"
