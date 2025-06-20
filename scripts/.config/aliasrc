@@ -1,27 +1,11 @@
 # vim: set ft=bash
 
-#alias .="cd .."
-alias ..="cd ../.."
-alias ...="cd ../../.."
-
 # alias kitty ssh to pass terminal info
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 alias vim="nvim"
 
-alias clip="xclip -sel clip"
-
-alias n="nnn -eH"
-
-alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
-
-alias cl="clear"
-
-alias ls="ls -hN --color=auto --group-directories-first"
-alias l="ls"
-alias la="ls -AlhN --color=auto --group-directories-first"
-
-alias mkd="mkdir -pv"
+alias la="ls -Alh --color=auto --group-directories-first"
 
 # git aliases
 alias ga='git add'
@@ -44,8 +28,6 @@ alias gr='git reset'
 alias gsa='git status'
 alias gs='gsa --short'
 alias gu='git pull'
-
-alias cal="calcurse"
 
 new_notes() {
     folder_name="$1"
@@ -111,9 +93,6 @@ mvdl() {
 }
 
 
-# ranger 
-alias rg='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-
 # view notes pdf
 function vpdf {
     if [ -z "$1" ]; then
@@ -158,8 +137,5 @@ function extract {
     fi
 fi
 }
-
-# pastebin
-alias topaste='curl -s -X POST --data-binary @- https://paste.jaims.dev/documents | jq -r ".key" | xargs -I{} sh -c "echo https://paste.jaims.dev/{} | tee /dev/tty | wl-copy"'
 
 alias to0x0='curl -F "file=@-" 0x0.st'
