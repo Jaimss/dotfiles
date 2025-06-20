@@ -5,9 +5,6 @@
 	email = james@harrell365.com
 	name = James Harrell
 
-[alias]
-	ac = !git add -A && git commit
-
 [commit]
 	gpgsign = true
     verbose = true
@@ -26,7 +23,6 @@
     context = 3  # less context in diffs
     renames = copies  # detect copies as renames in diffs
     interHunkContext = 10  # merge near hunks in diffs
-
 
 [log]
     abbrevCommit = true  # short commits

@@ -41,8 +41,8 @@ alias gm='git merge'
 alias gn='git checkout -b'  # new branch
 alias gp='git push'
 alias gr='git reset'
-alias gs='git status'
-alias gss='gs --short'
+alias gsa='git status'
+alias gs='gsa --short'
 alias gu='git pull'
 
 alias cal="calcurse"
@@ -122,7 +122,7 @@ function vpdf {
     fi
     zathura $1/output/*.pdf &
 }
-alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
+#alias snotes="git ac -m 'Saved Class Notes $(date)' && git push"
 
 alias fman='compgen -c | fzf | xargs man'
 
