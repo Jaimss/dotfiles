@@ -105,5 +105,8 @@ source /home/james/.config/zsh/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 bindkey '^I' fzf_completion
 source <(fzf --zsh)
 
+# compdump
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
+
 
 eval "$(starship init zsh)"

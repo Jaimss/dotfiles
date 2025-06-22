@@ -92,4 +92,4 @@
     insteadOf = "gh:"
 
 [url "git@github.com:Jaimss/"]
-    insteadOf = "ja"
+    insteadOf = "ja:"
