@@ -35,10 +35,8 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
 # jetbrains toolbox
 export PATH="$PATH:/home/james/.local/share/JetBrains/Toolbox/scripts"
 
-source "$XDG_CONFIG_HOME/aliasrc"
-
 # zsh
-export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
 # gtk2
@@ -76,6 +74,8 @@ export W3M_DIR="$XDG_STATE_HOME/w3m"
 # python
 export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 export PYLINTHOME="$XDG_CACHE_HOME/pylint"
+
+source "$XDG_CONFIG_HOME/aliasrc"
 
 # set PATH so it includes user's local/bin
 if [ -d "$HOME/.local/bin" ] ; then
