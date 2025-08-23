@@ -8,26 +8,26 @@ alias vim="nvim"
 alias la="ls -Alh --color=auto --group-directories-first"
 
 # git aliases
-alias ga='git add'
-alias gap='ga --patch'
-alias gb='git branch'
-alias gba='gb --all'
-alias gc='git commit'
-alias gca='gc --amend --no-edit'
-alias gce='gc --amend'
-alias gco='git checkout'
-alias gcl='git clone --recursive'
-alias gd='git diff --output-indicator-new=" " --output-indicator-old=" "'
-alias gds='gd --staged'
-alias gi='git init'
-alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
-alias gm='git merge'
-alias gn='git checkout -b'  # new branch
-alias gp='git push'
-alias gr='git reset'
-alias gsa='git status'
-alias gs='gsa --short'
-alias gu='git pull'
+alias gia='git add'
+alias giap='gia --patch'
+alias gib='git branch'
+alias giba='gib --all'
+alias gic='git commit'
+alias gica='gic --amend --no-edit'
+alias gice='gic --amend'
+alias gico='git checkout'
+alias gicl='git clone --recursive'
+alias gid='git diff --output-indicator-new=" " --output-indicator-old=" "'
+alias gids='gid --staged'
+alias gii='git init'
+alias gil='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n"'
+alias gim='git merge'
+alias gin='git checkout -b'  # new branch
+alias gip='git push'
+alias gir='git reset'
+alias gisa='git status'
+alias gis='gisa --short'
+alias giu='git pull'
 
 new_notes() {
     folder_name="$1"

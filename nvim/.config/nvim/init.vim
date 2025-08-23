@@ -172,6 +172,9 @@ let g:validator_permament_sign = 1
 " autocmd vimenter * NERDTree
 map <leader>n :NERDTreeToggle<Cr>
 
+" telescope
+map <leader>t :Telescope<cr>
+
 " ctrl p
 map <leader>p :CtrlP<cr>
 let g:ctrlp_working_path_mode = 'ra'
@@ -214,6 +217,10 @@ Plug 'mattn/emmet-vim'
 Plug 'https://github.com/joshdick/onedark.vim.git'
 " latex
 Plug 'lervag/vimtex'
+
+" telescope fuzzy finder
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
 call plug#end()
 
